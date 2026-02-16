@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <title>Nura AI — Privacy Policy</title>
+    <meta
+      name="description"
+      content="Privacy Policy for Nura AI (GDPR). Learn what data we collect, why we collect it, how we protect it, and your rights."
+    />
+
+    <style>
+      :root {
+        --bg: #0b0f1a;
+        --panel: rgba(255, 255, 255, 0.06);
+        --panel2: rgba(255, 255, 255, 0.09);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.70);
+        --faint: rgba(255, 255, 255, 0.50);
+        --border: rgba(255, 255, 255, 0.14);
+        --shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+        --radius: 18px;
+        --accent: #7c5cff;
+        --accent2: #3dd6d0;
+        --link: #9aa7ff;
+        --maxw: 1040px;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f6f7fb;
+          --panel: rgba(10, 14, 24, 0.05);
+          --panel2: rgba(10, 14, 24, 0.08);
+          --text: rgba(10, 14, 24, 0.92);
+          --muted: rgba(10, 14, 24, 0.70);
+          --faint: rgba(10, 14, 24, 0.52);
+          --border: rgba(10, 14, 24, 0.14);
+          --shadow: 0 18px 60px rgba(10, 14, 24, 0.12);
+          --link: #3f4cff;
+        }
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        line-height: 1.65;
+        color: var(--text);
+        background:
+          radial-gradient(1200px 700px at 18% 10%, rgba(124, 92, 255, 0.22), transparent 55%),
+          radial-gradient(1000px 600px at 86% 20%, rgba(61, 214, 208, 0.16), transparent 50%),
+          radial-gradient(1000px 700px at 55% 95%, rgba(124, 92, 255, 0.12), transparent 60%),
+          var(--bg);
+      }
+
+      a { color: var(--link); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 40px 18px 70px;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 14px 16px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+      }
+
+      .logo {
+        width: 36px;
+        height: 36px;
+        border-radius: 13px;
+        background:
+          radial-gradient(14px 14px at 30% 30%, rgba(255,255,255,0.55), transparent 60%),
+          linear-gradient(135deg, var(--accent), var(--accent2));
+        box-shadow: 0 10px 30px rgba(124, 92, 255, 0.22);
+        flex: 0 0 auto;
+      }
+
+      .brand-title {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+      }
+
+      .brand-title strong {
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .brand-title span {
+        font-size: 12px;
+        color: var(--muted);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--panel2);
+        color: var(--text);
+        font-size: 12px;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--accent), var(--accent2));
+        box-shadow: 0 0 0 4px rgba(124, 92, 255, 0.15);
+      }
+
+      header.hero {
+        padding: 26px 6px 16px;
+      }
+
+      .hero h1 {
+        margin: 18px 0 10px;
+        font-size: clamp(28px, 3.6vw, 46px);
+        line-height: 1.15;
+        letter-spacing: -0.7px;
+      }
+
+      .hero p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        max-width: 80ch;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      @media (min-width: 980px) {
+        .layout {
+          grid-template-columns: 0.42fr 0.58fr;
+          align-items: start;
+        }
+      }
+
+      .card {
+        border: 1px solid var(--border);
+        background: var(--panel);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .card-inner { padding: 18px 18px; }
+
+      .toc h2, .content h2 {
+        margin: 0 0 10px;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .toc a {
+        display: block;
+        padding: 10px 12px;
+        border: 1px solid transparent;
+        border-radius: 12px;
+        color: var(--text);
+      }
+
+      .toc a:hover {
+        background: var(--panel2);
+        border-color: var(--border);
+        text-decoration: none;
+      }
+
+      .toc small {
+        color: var(--faint);
+        margin-left: 6px;
+      }
+
+      .content section {
+        padding: 20px 18px;
+        border-top: 1px solid var(--border);
+      }
+
+      .content section:first-of-type { border-top: none; }
+
+      .content h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        letter-spacing: -0.2px;
+      }
+
+      .content p {
+        margin: 0 0 12px;
+        color: var(--text);
+      }
+
+      .content ul {
+        margin: 0 0 12px 18px;
+      }
+
+      .content li {
+        margin: 6px 0;
+        color: var(--text);
+      }
+
+      .callout {
+        margin-top: 10px;
+        padding: 12px 12px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: var(--panel2);
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .kv {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .kv .row {
+        padding: 12px 12px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: var(--panel2);
+      }
+
+      .kv .k {
+        font-size: 12px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        margin-bottom: 4px;
+      }
+
+      .kv .v {
+        font-size: 14px;
+        color: var(--text);
+        word-break: break-word;
+      }
+
+      footer {
+        margin-top: 18px;
+        padding: 18px 10px 0;
+        color: var(--muted);
+        font-size: 13px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .footer-links a {
+        padding: 8px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: var(--panel);
+      }
+
+      .footer-links a:hover {
+        background: var(--panel2);
+        text-decoration: none;
+      }
+
+      @media print {
+        body { background: #fff; color: #000; }
+        .topbar, .toc, footer { display: none !important; }
+        .card { border: none; box-shadow: none; background: transparent; }
+        a { color: #000; text-decoration: underline; }
+        .content section { border-top: 1px solid #ddd; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="wrap" id="top">
+      <div class="topbar">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="brand-title">
+            <strong>Nura AI</strong>
+            <span>Privacy Policy (GDPR)</span>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <span class="chip"><span class="dot" aria-hidden="true"></span> GDPR</span>
+          <span class="chip">Last updated: <strong>2026-02-17</strong></span>
+        </div>
+      </div>
+
+      <header class="hero">
+        <h1>Privacy Policy</h1>
+        <p>
+          This Privacy Policy explains how Nura AI (“we”, “us”, “our”) collects, uses, shares, and protects personal data
+          when you use our mobile application (the “App”). We comply with the General Data Protection Regulation (GDPR)
+          and applicable German data protection laws.
+        </p>
+      </header>
+
+      <div class="layout">
+        <aside class="card toc" aria-label="Table of contents">
+          <div class="card-inner">
+            <h2>Contents</h2>
+            <nav>
+              <a href="#controller">1. Controller <small>Who is responsible</small></a>
+              <a href="#data">2. Data we collect <small>What we process</small></a>
+              <a href="#purposes">3. Purposes & legal bases <small>Why we process</small></a>
+              <a href="#sharing">4. Sharing & providers <small>Who receives data</small></a>
+              <a href="#transfers">5. International transfers <small>Outside EU/EEA</small></a>
+              <a href="#security">6. Security <small>How we protect data</small></a>
+              <a href="#retention">7. Retention <small>How long we keep data</small></a>
+              <a href="#rights">8. Your rights <small>GDPR rights</small></a>
+              <a href="#deletion">9. Account deletion <small>Delete your data</small></a>
+              <a href="#children">10. Children <small>Age limits</small></a>
+              <a href="#changes">11. Changes <small>Updates</small></a>
+              <a href="#contact">12. Contact <small>Reach us</small></a>
+            </nav>
+
+            <div class="callout">
+              Related pages:
+              <div style="margin-top: 8px; display: grid; gap: 6px;">
+                <a href="../terms/">Terms of Use</a>
+                <a href="../impressum/">Impressum</a>
+                <a href="../">Legal Center</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <article class="card content" aria-label="Privacy policy content">
+          <section id="controller">
+            <h3>1. Data Controller</h3>
+            <p>The controller responsible for processing your personal data under GDPR is:</p>
+
+            <div class="kv" role="list">
+              <div class="row" role="listitem">
+                <div class="k">Controller</div>
+                <div class="v">Khaled Ibrahim Basha</div>
+              </div>
+              <div class="row" role="listitem">
+                <div class="k">Address</div>
+                <div class="v">
+                  Khaled Ibrahim Basha<br />
+                  c/o flexdienst – #20304<br />
+                  Kurt-Schumacher-Straße 76<br />
+                  67663 Kaiserslautern<br />
+                  Germany
+                </div>
+              </div>
+              <div class="row" role="listitem">
+                <div class="k">Email</div>
+                <div class="v">
+                  <a href="mailto:support@nura-ai.app">support@nura-ai.app</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="data">
+            <h3>2. Data we collect</h3>
+
+            <p><strong>Account and authentication data</strong></p>
+            <ul>
+              <li>Email address (email sign-in and support contact).</li>
+              <li>Apple Sign In / Google Sign In identifiers used to authenticate you.</li>
+              <li>Optional profile details you provide (e.g., name).</li>
+            </ul>
+
+            <p><strong>Data you create in the App</strong></p>
+            <ul>
+              <li>Tasks, goals, schedules, notes, and other productivity content you enter.</li>
+              <li>Focus session settings and preferences.</li>
+            </ul>
+
+            <p><strong>Subscription and purchase data</strong></p>
+            <ul>
+              <li>Subscription status and entitlement information (active/inactive, product identifiers).</li>
+              <li>Purchase references used to validate premium access.</li>
+              <li>Payments are processed by Apple (App Store) or Google (Play Store). We do not receive full payment card details.</li>
+            </ul>
+
+            <div class="callout">
+              We do not collect location data, contacts, photos, microphone audio, or health data unless we explicitly add such
+              features in the future and update this Privacy Policy.
+            </div>
+          </section>
+
+          <section id="purposes">
+            <h3>3. Purposes and legal bases (GDPR)</h3>
+            <p>We process personal data to:</p>
+            <ul>
+              <li>Provide and maintain the App’s core features (account, syncing, settings).</li>
+              <li>Authenticate users and secure accounts.</li>
+              <li>Validate subscriptions and provide premium access.</li>
+              <li>Provide customer support and respond to requests.</li>
+              <li>Improve stability, performance, and fix bugs.</li>
+              <li>Prevent fraud and misuse and maintain security.</li>
+            </ul>
+
+            <p><strong>Legal bases</strong></p>
+            <ul>
+              <li><strong>Art. 6(1)(b) GDPR</strong> — performance of a contract (providing the App).</li>
+              <li><strong>Art. 6(1)(f) GDPR</strong> — legitimate interests (security, fraud prevention, improvement).</li>
+              <li><strong>Art. 6(1)(c) GDPR</strong> — legal obligations where applicable.</li>
+              <li><strong>Art. 6(1)(a) GDPR</strong> — consent, only if required for future features.</li>
+            </ul>
+          </section>
+
+          <section id="sharing">
+            <h3>4. Sharing and third-party providers</h3>
+            <p>We share data only when needed to operate the App or comply with law. We use these providers:</p>
+            <ul>
+              <li><strong>Supabase</strong> — authentication and database hosting for app data.</li>
+              <li><strong>RevenueCat</strong> — subscription and entitlement verification.</li>
+              <li><strong>Apple / Google</strong> — sign-in (if chosen) and purchase processing via the App Store / Play Store.</li>
+            </ul>
+
+            <div class="callout">
+              Apple and Google may process certain purchase data as independent controllers under their own policies.
+            </div>
+          </section>
+
+          <section id="transfers">
+            <h3>5. International transfers</h3>
+            <p>
+              We aim to store and process data within the EU/EEA where possible. Some providers may process data outside the EU/EEA
+              depending on infrastructure and configuration. Where required, we rely on appropriate safeguards such as adequacy
+              decisions or Standard Contractual Clauses (SCCs).
+            </p>
+          </section>
+
+          <section id="security">
+            <h3>6. Security</h3>
+            <p>We use appropriate technical and organizational measures to protect your data, including:</p>
+            <ul>
+              <li>Encrypted transport (HTTPS/TLS).</li>
+              <li>Authentication and access controls.</li>
+              <li>Data minimization (collecting only what is necessary).</li>
+            </ul>
+          </section>
+
+          <section id="retention">
+            <h3>7. Data retention</h3>
+            <p>We retain personal data only as long as necessary to provide the App and for legitimate legal or business purposes.</p>
+            <ul>
+              <li>Account data and app content are kept while your account is active.</li>
+              <li>Support messages are retained for a reasonable period to resolve issues.</li>
+              <li>Some records may be retained if required by law.</li>
+            </ul>
+          </section>
+
+          <section id="rights">
+            <h3>8. Your rights (GDPR)</h3>
+            <p>If you are located in the EU/EEA, you have the right to:</p>
+            <ul>
+              <li>Access your personal data.</li>
+              <li>Correct inaccurate data.</li>
+              <li>Request deletion (where applicable).</li>
+              <li>Restrict processing.</li>
+              <li>Data portability.</li>
+              <li>Object to processing based on legitimate interests.</li>
+              <li>Withdraw consent at any time (if processing is based on consent).</li>
+            </ul>
+            <p>
+              To exercise your rights, contact us at <a href="mailto:support@nura-ai.app">support@nura-ai.app</a>.
+            </p>
+            <div class="callout">
+              You also have the right to lodge a complaint with a supervisory authority (e.g., a German state data protection authority).
+            </div>
+          </section>
+
+          <section id="deletion">
+            <h3>9. Account deletion</h3>
+            <p>
+              You can delete your account directly in the App via <strong>Settings → Delete Account</strong>.
+              If you cannot access the App, you can request deletion via email at
+              <a href="mailto:support@nura-ai.app">support@nura-ai.app</a>.
+            </p>
+          </section>
+
+          <section id="children">
+            <h3>10. Children</h3>
+            <p>
+              The App is not intended for children under the age required to consent to data processing under applicable law.
+              If you believe a child has provided us personal data, please contact us and we will take appropriate steps.
+            </p>
+          </section>
+
+          <section id="changes">
+            <h3>11. Changes to this Privacy Policy</h3>
+            <p>
+              We may update this Privacy Policy from time to time. We will post the updated version on this page and update the
+              “Last updated” date above.
+            </p>
+          </section>
+
+          <section id="contact">
+            <h3>12. Contact</h3>
+            <p>If you have questions about this Privacy Policy or your data, contact:</p>
+
+            <div class="kv" role="list">
+              <div class="row" role="listitem">
+                <div class="k">Email</div>
+                <div class="v"><a href="mailto:support@nura-ai.app">support@nura-ai.app</a></div>
+              </div>
+              <div class="row" role="listitem">
+                <div class="k">Address</div>
+                <div class="v">
+                  Khaled Ibrahim Basha<br />
+                  c/o flexdienst – #20304<br />
+                  Kurt-Schumacher-Straße 76<br />
+                  67663 Kaiserslautern<br />
+                  Germany
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <footer>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="../">Legal Center</a>
+          <a href="../terms/">Terms</a>
+          <a href="../impressum/">Impressum</a>
+          <a href="mailto:support@nura-ai.app">Contact</a>
+        </div>
+        <span>© Nura AI</span>
+      </footer>
+    </main>
+  </body>
+</html>

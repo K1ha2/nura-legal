@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <title>Nura AI — Terms of Use</title>
+    <meta
+      name="description"
+      content="Terms of Use for Nura AI. Rules for using the app, subscriptions, acceptable use, disclaimers, and contact information."
+    />
+
+    <style>
+      :root {
+        --bg: #0b0f1a;
+        --panel: rgba(255, 255, 255, 0.06);
+        --panel2: rgba(255, 255, 255, 0.09);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.70);
+        --faint: rgba(255, 255, 255, 0.50);
+        --border: rgba(255, 255, 255, 0.14);
+        --shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+        --radius: 18px;
+        --accent: #7c5cff;
+        --accent2: #3dd6d0;
+        --link: #9aa7ff;
+        --maxw: 1040px;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f6f7fb;
+          --panel: rgba(10, 14, 24, 0.05);
+          --panel2: rgba(10, 14, 24, 0.08);
+          --text: rgba(10, 14, 24, 0.92);
+          --muted: rgba(10, 14, 24, 0.70);
+          --faint: rgba(10, 14, 24, 0.52);
+          --border: rgba(10, 14, 24, 0.14);
+          --shadow: 0 18px 60px rgba(10, 14, 24, 0.12);
+          --link: #3f4cff;
+        }
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        line-height: 1.65;
+        color: var(--text);
+        background:
+          radial-gradient(1200px 700px at 18% 10%, rgba(124, 92, 255, 0.22), transparent 55%),
+          radial-gradient(1000px 600px at 86% 20%, rgba(61, 214, 208, 0.16), transparent 50%),
+          radial-gradient(1000px 700px at 55% 95%, rgba(124, 92, 255, 0.12), transparent 60%),
+          var(--bg);
+      }
+
+      a { color: var(--link); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 40px 18px 70px;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 14px 16px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+      }
+
+      .logo {
+        width: 36px;
+        height: 36px;
+        border-radius: 13px;
+        background:
+          radial-gradient(14px 14px at 30% 30%, rgba(255,255,255,0.55), transparent 60%),
+          linear-gradient(135deg, var(--accent), var(--accent2));
+        box-shadow: 0 10px 30px rgba(124, 92, 255, 0.22);
+        flex: 0 0 auto;
+      }
+
+      .brand-title {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+      }
+
+      .brand-title strong {
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .brand-title span {
+        font-size: 12px;
+        color: var(--muted);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--panel2);
+        color: var(--text);
+        font-size: 12px;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--accent), var(--accent2));
+        box-shadow: 0 0 0 4px rgba(124, 92, 255, 0.15);
+      }
+
+      header.hero {
+        padding: 26px 6px 16px;
+      }
+
+      .hero h1 {
+        margin: 18px 0 10px;
+        font-size: clamp(28px, 3.6vw, 46px);
+        line-height: 1.15;
+        letter-spacing: -0.7px;
+      }
+
+      .hero p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        max-width: 80ch;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      @media (min-width: 980px) {
+        .layout {
+          grid-template-columns: 0.42fr 0.58fr;
+          align-items: start;
+        }
+      }
+
+      .card {
+        border: 1px solid var(--border);
+        background: var(--panel);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .card-inner { padding: 18px 18px; }
+
+      .toc h2 {
+        margin: 0 0 10px;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .toc a {
+        display: block;
+        padding: 10px 12px;
+        border: 1px solid transparent;
+        border-radius: 12px;
+        color: var(--text);
+      }
+
+      .toc a:hover {
+        background: var(--panel2);
+        border-color: var(--border);
+        text-decoration: none;
+      }
+
+      .toc small {
+        color: var(--faint);
+        margin-left: 6px;
+      }
+
+      .callout {
+        margin-top: 10px;
+        padding: 12px 12px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: var(--panel2);
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .content section {
+        padding: 20px 18px;
+        border-top: 1px solid var(--border);
+      }
+      .content section:first-of-type { border-top: none; }
+
+      .content h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        letter-spacing: -0.2px;
+      }
+
+      .content p { margin: 0 0 12px; }
+      .content ul { margin: 0 0 12px 18px; }
+      .content li { margin: 6px 0; }
+
+      .kv {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .kv .row {
+        padding: 12px 12px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: var(--panel2);
+      }
+
+      .kv .k {
+        font-size: 12px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        margin-bottom: 4px;
+      }
+
+      .kv .v {
+        font-size: 14px;
+        color: var(--text);
+        word-break: break-word;
+      }
+
+      footer {
+        margin-top: 18px;
+        padding: 18px 10px 0;
+        color: var(--muted);
+        font-size: 13px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .footer-links a {
+        padding: 8px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: var(--panel);
+      }
+
+      .footer-links a:hover {
+        background: var(--panel2);
+        text-decoration: none;
+      }
+
+      @media print {
+        body { background: #fff; color: #000; }
+        .topbar, .toc, footer { display: none !important; }
+        .card { border: none; box-shadow: none; background: transparent; }
+        a { color: #000; text-decoration: underline; }
+        .content section { border-top: 1px solid #ddd; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="wrap" id="top">
+      <div class="topbar">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="brand-title">
+            <strong>Nura AI</strong>
+            <span>Terms of Use</span>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <span class="chip"><span class="dot" aria-hidden="true"></span> Terms</span>
+          <span class="chip">Last updated: <strong>2026-02-17</strong></span>
+        </div>
+      </div>
+
+      <header class="hero">
+        <h1>Terms of Use</h1>
+        <p>
+          These Terms of Use govern your access to and use of the Nura AI mobile application (the “App”).
+          By using the App, you agree to these Terms.
+        </p>
+      </header>
+
+      <div class="layout">
+        <aside class="card toc" aria-label="Table of contents">
+          <div class="card-inner">
+            <h2>Contents</h2>
+            <nav>
+              <a href="#about">1. About the App <small>What Nura AI is</small></a>
+              <a href="#eligibility">2. Eligibility <small>Age and accounts</small></a>
+              <a href="#accounts">3. Accounts <small>Keeping your account safe</small></a>
+              <a href="#license">4. License <small>Your rights to use the App</small></a>
+              <a href="#acceptable">5. Acceptable Use <small>Rules and restrictions</small></a>
+              <a href="#subscriptions">6. Subscriptions <small>Billing & cancellation</small></a>
+              <a href="#content">7. Your Content <small>What you create</small></a>
+              <a href="#availability">8. Availability <small>Changes and downtime</small></a>
+              <a href="#disclaimer">9. Disclaimer <small>No warranties</small></a>
+              <a href="#liability">10. Limitation of Liability <small>Important limits</small></a>
+              <a href="#termination">11. Termination <small>Ending access</small></a>
+              <a href="#law">12. Governing Law <small>Germany</small></a>
+              <a href="#contact">13. Contact <small>Reach us</small></a>
+            </nav>
+
+            <div class="callout">
+              Related pages:
+              <div style="margin-top: 8px; display: grid; gap: 6px;">
+                <a href="../privacy/">Privacy Policy</a>
+                <a href="../impressum/">Impressum</a>
+                <a href="../">Legal Center</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <article class="card content" aria-label="Terms content">
+          <section id="about">
+            <h3>1. About the App</h3>
+            <p>
+              Nura AI is a productivity application designed to help you plan tasks, organize your day, and improve focus.
+              Features may include task planning, reminders, focus sessions, and other tools depending on the version you use.
+            </p>
+          </section>
+
+          <section id="eligibility">
+            <h3>2. Eligibility</h3>
+            <p>
+              You may use the App only if you are legally permitted to do so in your country and you can form a binding contract.
+              If you are under the age required to consent to data processing and app usage in your jurisdiction, you must have
+              permission from a parent or legal guardian.
+            </p>
+          </section>
+
+          <section id="accounts">
+            <h3>3. Accounts</h3>
+            <p>
+              To use certain features, you may need to create an account (e.g., via Apple Sign In, Google Sign In, or email).
+              You are responsible for:
+            </p>
+            <ul>
+              <li>Keeping your login credentials secure.</li>
+              <li>All activity under your account.</li>
+              <li>Providing accurate information where required.</li>
+            </ul>
+            <p>
+              If you believe your account has been compromised, contact us immediately at
+              <a href="mailto:support@nura-ai.app">support@nura-ai.app</a>.
+            </p>
+          </section>
+
+          <section id="license">
+            <h3>4. License</h3>
+            <p>
+              We grant you a limited, non-exclusive, non-transferable, revocable license to use the App for personal,
+              non-commercial purposes in accordance with these Terms and applicable laws.
+            </p>
+            <p>
+              You may not copy, modify, distribute, sell, lease, reverse engineer, or attempt to extract the source code of the App,
+              except where such restrictions are prohibited by law.
+            </p>
+          </section>
+
+          <section id="acceptable">
+            <h3>5. Acceptable Use</h3>
+            <p>You agree not to misuse the App. In particular, you must not:</p>
+            <ul>
+              <li>Use the App for unlawful, harmful, or abusive purposes.</li>
+              <li>Attempt to gain unauthorized access to the App, accounts, or systems.</li>
+              <li>Interfere with or disrupt the App’s operation (e.g., malware, excessive requests).</li>
+              <li>Upload content that infringes rights of others or violates applicable law.</li>
+            </ul>
+          </section>
+
+          <section id="subscriptions">
+            <h3>6. Subscriptions (Nura Plus)</h3>
+            <p>
+              The App may offer optional paid subscriptions (“Nura Plus”) that unlock premium features.
+              Purchases are handled by the App Store (Apple) or Google Play (Google), and their terms may also apply.
+            </p>
+
+            <p><strong>Billing</strong></p>
+            <ul>
+              <li>Subscription fees are billed in advance and renew automatically unless cancelled.</li>
+              <li>Prices may vary by region and are shown before purchase.</li>
+            </ul>
+
+            <p><strong>Cancellation</strong></p>
+            <ul>
+              <li>You can cancel anytime through your Apple ID / App Store settings or Google Play subscription settings.</li>
+              <li>Deleting the App does not cancel your subscription.</li>
+            </ul>
+
+            <p><strong>Refunds</strong></p>
+            <ul>
+              <li>Refund requests are handled by Apple or Google in accordance with their policies.</li>
+            </ul>
+
+            <div class="callout">
+              If you have subscription issues, contact us at <a href="mailto:support@nura-ai.app">support@nura-ai.app</a>.
+              We can help verify access, but we cannot directly process store refunds.
+            </div>
+          </section>
+
+          <section id="content">
+            <h3>7. Your Content</h3>
+            <p>
+              “Your Content” includes tasks, notes, schedules, and other information you enter into the App.
+              You retain ownership of Your Content.
+            </p>
+            <p>
+              You grant us a limited right to process Your Content solely to operate the App (e.g., saving, syncing, displaying),
+              as described in our <a href="../privacy/">Privacy Policy</a>.
+            </p>
+          </section>
+
+          <section id="availability">
+            <h3>8. Availability and Changes</h3>
+            <p>
+              We may update, change, or discontinue features to improve the App or comply with legal requirements.
+              We do not guarantee that the App will always be available or error-free.
+            </p>
+          </section>
+
+          <section id="disclaimer">
+            <h3>9. Disclaimer</h3>
+            <p>
+              The App is provided “as is” and “as available”. To the maximum extent permitted by law, we disclaim all warranties,
+              express or implied, including fitness for a particular purpose, availability, and non-infringement.
+            </p>
+            <p>
+              Nura AI is a productivity tool and does not provide medical, legal, or financial advice.
+            </p>
+          </section>
+
+          <section id="liability">
+            <h3>10. Limitation of Liability</h3>
+            <p>
+              To the maximum extent permitted by law, we are not liable for indirect, incidental, special, consequential,
+              or punitive damages, or any loss of profits or data, arising from your use of the App.
+            </p>
+            <p>
+              Nothing in these Terms limits liability for intent, gross negligence, or where liability cannot be excluded by law.
+            </p>
+          </section>
+
+          <section id="termination">
+            <h3>11. Termination</h3>
+            <p>
+              We may suspend or terminate access to the App if you violate these Terms or if required for security or legal reasons.
+              You may stop using the App at any time.
+            </p>
+          </section>
+
+          <section id="law">
+            <h3>12. Governing Law</h3>
+            <p>
+              These Terms are governed by the laws of Germany, excluding its conflict of law rules, unless mandatory consumer
+              protection laws in your country require otherwise.
+            </p>
+          </section>
+
+          <section id="contact">
+            <h3>13. Contact</h3>
+            <p>If you have questions about these Terms, contact:</p>
+
+            <div class="kv" role="list">
+              <div class="row" role="listitem">
+                <div class="k">Email</div>
+                <div class="v"><a href="mailto:support@nura-ai.app">support@nura-ai.app</a></div>
+              </div>
+              <div class="row" role="listitem">
+                <div class="k">Address</div>
+                <div class="v">
+                  Khaled Ibrahim Basha<br />
+                  c/o flexdienst – #20304<br />
+                  Kurt-Schumacher-Straße 76<br />
+                  67663 Kaiserslautern<br />
+                  Germany
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <footer>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="../">Legal Center</a>
+          <a href="../privacy/">Privacy</a>
+          <a href="../impressum/">Impressum</a>
+          <a href="mailto:support@nura-ai.app">Contact</a>
+        </div>
+        <span>© Nura AI</span>
+      </footer>
+    </main>
+  </body>
+</html>

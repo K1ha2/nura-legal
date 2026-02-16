@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <title>Nura AI — Impressum</title>
+    <meta
+      name="description"
+      content="Impressum für Nura AI. Anbieterkennzeichnung nach deutschem Recht."
+    />
+
+    <style>
+      :root {
+        --bg: #0b0f1a;
+        --panel: rgba(255, 255, 255, 0.06);
+        --panel2: rgba(255, 255, 255, 0.09);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.70);
+        --faint: rgba(255, 255, 255, 0.50);
+        --border: rgba(255, 255, 255, 0.14);
+        --shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+        --radius: 18px;
+        --accent: #7c5cff;
+        --accent2: #3dd6d0;
+        --link: #9aa7ff;
+        --maxw: 1040px;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f6f7fb;
+          --panel: rgba(10, 14, 24, 0.05);
+          --panel2: rgba(10, 14, 24, 0.08);
+          --text: rgba(10, 14, 24, 0.92);
+          --muted: rgba(10, 14, 24, 0.70);
+          --faint: rgba(10, 14, 24, 0.52);
+          --border: rgba(10, 14, 24, 0.14);
+          --shadow: 0 18px 60px rgba(10, 14, 24, 0.12);
+          --link: #3f4cff;
+        }
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        line-height: 1.65;
+        color: var(--text);
+        background:
+          radial-gradient(1200px 700px at 18% 10%, rgba(124, 92, 255, 0.22), transparent 55%),
+          radial-gradient(1000px 600px at 86% 20%, rgba(61, 214, 208, 0.16), transparent 50%),
+          radial-gradient(1000px 700px at 55% 95%, rgba(124, 92, 255, 0.12), transparent 60%),
+          var(--bg);
+      }
+
+      a { color: var(--link); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 40px 18px 70px;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 14px 16px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+      }
+
+      .logo {
+        width: 36px;
+        height: 36px;
+        border-radius: 13px;
+        background:
+          radial-gradient(14px 14px at 30% 30%, rgba(255,255,255,0.55), transparent 60%),
+          linear-gradient(135deg, var(--accent), var(--accent2));
+        box-shadow: 0 10px 30px rgba(124, 92, 255, 0.22);
+        flex: 0 0 auto;
+      }
+
+      .brand-title {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+      }
+
+      .brand-title strong {
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .brand-title span {
+        font-size: 12px;
+        color: var(--muted);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--panel2);
+        color: var(--text);
+        font-size: 12px;
+      }
+
+      header.hero {
+        padding: 26px 6px 16px;
+      }
+
+      .hero h1 {
+        margin: 18px 0 10px;
+        font-size: clamp(28px, 3.6vw, 46px);
+        line-height: 1.15;
+        letter-spacing: -0.7px;
+      }
+
+      .hero p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        max-width: 80ch;
+      }
+
+      .card {
+        border: 1px solid var(--border);
+        background: var(--panel);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        margin-top: 18px;
+      }
+
+      .content { padding: 20px 18px; }
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        letter-spacing: -0.2px;
+      }
+
+      p { margin: 0 0 12px; }
+
+      .kv {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .kv .row {
+        padding: 12px 12px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: var(--panel2);
+      }
+
+      .kv .k {
+        font-size: 12px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        margin-bottom: 4px;
+      }
+
+      .kv .v {
+        font-size: 14px;
+        color: var(--text);
+        word-break: break-word;
+      }
+
+      .note {
+        margin-top: 12px;
+        padding: 12px 12px;
+        border: 1px dashed var(--border);
+        border-radius: 14px;
+        background: var(--panel2);
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      footer {
+        margin-top: 18px;
+        padding: 18px 10px 0;
+        color: var(--muted);
+        font-size: 13px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .footer-links a {
+        padding: 8px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: var(--panel);
+      }
+
+      .footer-links a:hover {
+        background: var(--panel2);
+        text-decoration: none;
+      }
+
+      @media print {
+        body { background: #fff; color: #000; }
+        .topbar, footer { display: none !important; }
+        .card { border: none; box-shadow: none; background: transparent; }
+        a { color: #000; text-decoration: underline; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="wrap" id="top">
+      <div class="topbar">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="brand-title">
+            <strong>Nura AI</strong>
+            <span>Impressum</span>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <span class="chip">Stand: <strong>2026-02-17</strong></span>
+        </div>
+      </div>
+
+      <header class="hero">
+        <h1>Impressum</h1>
+        <p>
+          Anbieterkennzeichnung nach § 5 TMG und Informationen gemäß § 18 Abs. 2 MStV
+          (für Inhalte dieser Website / App).
+        </p>
+      </header>
+
+      <section class="card" aria-label="Impressum Inhalt">
+        <div class="content">
+          <h2>Anbieter</h2>
+
+          <div class="kv" role="list">
+            <div class="row" role="listitem">
+              <div class="k">Name</div>
+              <div class="v">Khaled Ibrahim Basha</div>
+            </div>
+
+            <div class="row" role="listitem">
+              <div class="k">Anschrift</div>
+              <div class="v">
+                Khaled Ibrahim Basha - NuraAi<br />
+                c/o flexdienst – #20304<br />
+                Kurt-Schumacher-Straße 76<br />
+                67663 Kaiserslautern<br />
+                Deutschland
+              </div>
+            </div>
+
+            <div class="row" role="listitem">
+              <div class="k">E-Mail</div>
+              <div class="v">
+                <a href="mailto:support@nura-ai.app">support@nura-ai.app</a>
+              </div>
+            </div>
+
+            <div class="row" role="listitem">
+              <div class="k">Verantwortlich für den Inhalt</div>
+              <div class="v">
+                Khaled Ibrahim Basha - NuraAI 
+              </div>
+            </div>
+          </div>
+
+          <div class="note">
+            <strong>Hinweis:</strong> ###
+          </div>
+
+          <h2 style="margin-top:18px;">Haftung für Inhalte</h2>
+          <p>
+            Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
+            verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder
+            gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit
+            hinweisen.
+          </p>
+          <p>
+            Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon
+            unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung
+            möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+          </p>
+          
+
+          <h2 style="margin-top:18px;">Haftung für Links</h2>
+          <p>
+            Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir
+            für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige
+            Anbieter oder Betreiber der Seiten verantwortlich.
+          </p>
+          <p>
+            Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte
+            waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch
+            ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir
+            derartige Links umgehend entfernen.
+          </p>
+
+          <h2 style="margin-top:18px;">Urheberrecht</h2>
+          <p>
+            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.
+            Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der
+            Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw.
+            Erstellers.
+          </p>
+          <p>
+            Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+          </p>
+
+          <div class="note">
+            <strong>Kontakt für Hinweise:</strong> Wenn du Inhalte oder Links melden möchtest, schreibe an
+            <a href="mailto:support@nura-ai.app">support@nura-ai.app</a>.
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="../">Legal Center</a>
+          <a href="../privacy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+          <a href="mailto:support@nura-ai.app">Contact</a>
+        </div>
+        <span>© Nura AI</span>
+      </footer>
+    </main>
+  </body>
+</html>
