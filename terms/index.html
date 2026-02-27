@@ -1,0 +1,792 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <title>Nura AI — Terms of Use</title>
+    <meta name="description" content="Terms of Use for Nura AI. Rules for using the app, subscriptions, acceptable use, AI features, disclaimers, and contact information." />
+
+    <style>
+      :root {
+        --bg:#ffffff;
+        --fg:#0b0b0b;
+        --muted:#4b4b4b;
+        --faint:#6a6a6a;
+        --border:#e9e9e9;
+        --card:#ffffff;
+        --chip:#f6f6f6;
+        --maxw:1080px;
+        --radius:18px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg:#0b0b0b;
+          --fg:#f4f4f4;
+          --muted:#c8c8c8;
+          --faint:#a3a3a3;
+          --border:#1f1f1f;
+          --card:#0f0f0f;
+          --chip:#121212;
+        }
+      }
+
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{
+        margin:0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+        line-height:1.65;
+        color:var(--fg);
+        background:var(--bg);
+      }
+
+      a{color:inherit; text-decoration: underline; text-underline-offset: 3px;}
+      a:hover{opacity:.86}
+
+      .wrap{max-width:var(--maxw); margin:0 auto; padding:26px 16px 72px;}
+
+      /* Top nav */
+      .nav{
+        display:flex; align-items:center; justify-content:space-between; gap:12px;
+        padding:12px 14px;
+        border:1px solid var(--border);
+        border-radius:999px;
+        background:var(--card);
+      }
+      .brand{display:flex; align-items:center; gap:10px; min-width:0;}
+      .mark{
+        width:34px; height:34px;
+        border-radius:12px;
+        border:1px solid var(--border);
+        background:var(--chip);
+        display:grid; place-items:center;
+        font-weight:800;
+        letter-spacing:.3px;
+      }
+      .brand-title{display:flex; flex-direction:column; min-width:0;}
+      .brand-title strong{font-size:14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+      .brand-title span{font-size:12px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+      .right{display:flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:flex-end;}
+      .pill{
+        display:inline-flex; align-items:center; gap:8px;
+        padding:8px 10px;
+        border:1px solid var(--border);
+        border-radius:999px;
+        background:var(--chip);
+        font-size:12px;
+        text-decoration:none;
+      }
+
+      /* Language toggle */
+      .lang-toggle{display:inline-flex; gap:6px; align-items:center;}
+      .lang-btn{
+        appearance:none;
+        border:1px solid var(--border);
+        background:var(--chip);
+        color:var(--fg);
+        font-size:12px;
+        padding:8px 10px;
+        border-radius:999px;
+        cursor:pointer;
+      }
+      .lang-btn[aria-pressed="true"]{
+        background:var(--fg);
+        color:var(--bg);
+        border-color:var(--fg);
+      }
+
+      /* Hero */
+      header.hero{padding:22px 2px 10px;}
+      h1{
+        margin:16px 0 10px;
+        font-size: clamp(30px, 4vw, 50px);
+        line-height: 1.08;
+        letter-spacing: -0.85px;
+      }
+      .sub{
+        margin:0;
+        max-width: 92ch;
+        color:var(--muted);
+        font-size: 15px;
+      }
+
+      /* Layout */
+      .layout{display:grid; grid-template-columns:1fr; gap:14px; margin-top:18px;}
+      @media (min-width: 980px){
+        .layout{grid-template-columns: 0.42fr 0.58fr; align-items:start;}
+      }
+
+      .card{border:1px solid var(--border); border-radius:var(--radius); background:var(--card); overflow:hidden;}
+      .inner{padding:18px 18px;}
+
+      .kicker{margin:0 0 10px; font-size:12px; letter-spacing:.55px; text-transform:uppercase; color:var(--muted);}
+
+      /* TOC */
+      .toc a{
+        display:block;
+        padding:10px 12px;
+        border:1px solid transparent;
+        border-radius:14px;
+        text-decoration:none;
+      }
+      .toc a:hover{background:var(--chip); border-color:var(--border);}
+      .toc small{color:var(--faint); margin-left:6px;}
+
+      /* Content */
+      .content section{padding:18px 18px; border-top:1px solid var(--border);}
+      .content section:first-of-type{border-top:none}
+      .content h2{margin:0 0 10px; font-size:18px; letter-spacing:-.2px;}
+      .content p{margin:0 0 12px;}
+      .content ul{margin:0 0 12px 18px;}
+      .content li{margin:6px 0;}
+
+      .callout{
+        margin-top:12px;
+        padding:12px 12px;
+        border:1px solid var(--border);
+        border-radius:16px;
+        background:var(--chip);
+        color:var(--muted);
+        font-size:13px;
+      }
+
+      .kv{display:grid; grid-template-columns:1fr; gap:10px; margin-top:10px;}
+      .row{padding:14px 14px; border:1px solid var(--border); border-radius:16px; background:var(--chip);}
+      .k{font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.45px; margin-bottom:4px;}
+      .v{font-size:14px; word-break:break-word;}
+
+      /* Bilingual blocks */
+      .lang-block{display:none}
+      html[data-lang="en"] .lang-en{display:block}
+      html[data-lang="de"] .lang-de{display:block}
+
+      footer{
+        margin-top:18px;
+        padding:18px 4px 0;
+        color:var(--muted);
+        font-size:13px;
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+        align-items:center;
+        justify-content:space-between;
+      }
+      .footer-links{display:flex; flex-wrap:wrap; gap:10px; align-items:center;}
+      .footer-links a{
+        padding:8px 10px;
+        border-radius:999px;
+        border:1px solid var(--border);
+        background:var(--chip);
+        text-decoration:none;
+      }
+      .footer-links a:hover{opacity:.9}
+
+      @media print {
+        body{background:#fff;color:#000}
+        .nav, .toc, footer{display:none !important}
+        .card{border:none}
+        a{color:#000}
+        .content section{border-top:1px solid #ddd}
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="wrap" id="top">
+      <div class="nav">
+        <div class="brand">
+          <div class="mark" aria-hidden="true">N</div>
+          <div class="brand-title">
+            <strong>Nura AI</strong>
+            <span class="lang-block lang-en">Terms of Use</span>
+            <span class="lang-block lang-de">Nutzungsbedingungen</span>
+          </div>
+        </div>
+
+        <div class="right">
+          <a class="pill" href="mailto:support@nura-ai.app">support@nura-ai.app</a>
+
+          <div class="lang-toggle" aria-label="Language">
+            <button class="lang-btn" id="lang-en" type="button" aria-pressed="false">EN</button>
+            <button class="lang-btn" id="lang-de" type="button" aria-pressed="false">DE</button>
+          </div>
+
+          <a class="pill" href="../">Legal Center</a>
+
+          <span class="pill">
+            <span class="lang-block lang-en">Last updated: <strong>2026-02-25</strong></span>
+            <span class="lang-block lang-de">Stand: <strong>2026-02-25</strong></span>
+          </span>
+        </div>
+      </div>
+
+      <header class="hero">
+        <div class="lang-block lang-en">
+          <h1>Terms of Use</h1>
+          <p class="sub">
+            These Terms govern your access to and use of the Nura AI mobile application (the “App”), including AI features and subscriptions.
+            By using the App, you agree to these Terms.
+          </p>
+        </div>
+
+        <div class="lang-block lang-de">
+          <h1>Nutzungsbedingungen</h1>
+          <p class="sub">
+            Diese Bedingungen regeln die Nutzung der Nura AI App, inklusive KI-Funktionen und Abonnements.
+            Wenn du die App nutzt, stimmst du diesen Bedingungen zu.
+          </p>
+        </div>
+
+        <div class="callout" aria-label="Quick notes">
+          <div class="lang-block lang-en">
+            <strong>Quick notes</strong>
+            <ul style="margin:10px 0 0 18px;">
+              <li><strong>Subscriptions:</strong> Purchases are handled by Apple (App Store) or Google (Play Store).</li>
+              <li><strong>AI:</strong> AI features may use external providers (OpenAI / Google) and can be inaccurate.</li>
+              <li><strong>Privacy:</strong> Data processing is described in our <a href="../privacy/">Privacy Policy</a>.</li>
+            </ul>
+          </div>
+
+          <div class="lang-block lang-de">
+            <strong>Kurz wichtig</strong>
+            <ul style="margin:10px 0 0 18px;">
+              <li><strong>Abos:</strong> Käufe laufen über Apple (App Store) oder Google (Play Store).</li>
+              <li><strong>KI:</strong> KI-Funktionen können externe Anbieter nutzen (OpenAI / Google) und können Fehler machen.</li>
+              <li><strong>Datenschutz:</strong> Details stehen in der <a href="../privacy/">Datenschutzerklärung</a>.</li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <div class="layout">
+        <aside class="card toc" aria-label="Table of contents">
+          <div class="inner">
+            <p class="kicker">Contents</p>
+            <nav class="toc">
+              <a href="#about">1. <span class="lang-block lang-en">About Nura AI</span><span class="lang-block lang-de">Über Nura AI</span> <small>What the app does</small></a>
+              <a href="#eligibility">2. <span class="lang-block lang-en">Eligibility</span><span class="lang-block lang-de">Voraussetzungen</span> <small>Age & rules</small></a>
+              <a href="#accounts">3. <span class="lang-block lang-en">Accounts</span><span class="lang-block lang-de">Accounts</span> <small>Security</small></a>
+              <a href="#license">4. <span class="lang-block lang-en">License</span><span class="lang-block lang-de">Lizenz</span> <small>How you may use the app</small></a>
+              <a href="#acceptable">5. <span class="lang-block lang-en">Acceptable Use</span><span class="lang-block lang-de">Erlaubte Nutzung</span> <small>Do & don’t</small></a>
+              <a href="#ai">6. <span class="lang-block lang-en">AI features</span><span class="lang-block lang-de">KI-Funktionen</span> <small>OpenAI / Google</small></a>
+              <a href="#subscriptions">7. <span class="lang-block lang-en">Subscriptions & purchases</span><span class="lang-block lang-de">Abos & Käufe</span> <small>Billing</small></a>
+              <a href="#content">8. <span class="lang-block lang-en">Your Content</span><span class="lang-block lang-de">Deine Inhalte</span> <small>Ownership</small></a>
+              <a href="#thirdparty">9. <span class="lang-block lang-en">Third-party services</span><span class="lang-block lang-de">Drittanbieter</span> <small>Store & providers</small></a>
+              <a href="#availability">10. <span class="lang-block lang-en">Availability</span><span class="lang-block lang-de">Verfügbarkeit</span> <small>Changes</small></a>
+              <a href="#termination">11. <span class="lang-block lang-en">Termination</span><span class="lang-block lang-de">Beendigung</span> <small>Ending access</small></a>
+              <a href="#disclaimer">12. <span class="lang-block lang-en">Disclaimer</span><span class="lang-block lang-de">Hinweise</span> <small>No advice</small></a>
+              <a href="#liability">13. <span class="lang-block lang-en">Liability</span><span class="lang-block lang-de">Haftung</span> <small>Limits</small></a>
+              <a href="#law">14. <span class="lang-block lang-en">Governing law</span><span class="lang-block lang-de">Recht</span> <small>Germany</small></a>
+              <a href="#eula">15. <span class="lang-block lang-en">Apple Standard EULA</span><span class="lang-block lang-de">Apple Standard‑EULA</span> <small>iOS</small></a>
+              <a href="#contact">16. <span class="lang-block lang-en">Contact</span><span class="lang-block lang-de">Kontakt</span> <small>Reach us</small></a>
+            </nav>
+
+            <div class="callout">
+              <div class="lang-block lang-en">
+                Related pages:
+                <div style="margin-top:8px;display:grid;gap:6px;">
+                  <a href="../privacy/">Privacy Policy</a>
+                  <a href="../support/">Support</a>
+                  <a href="../impressum/">Impressum</a>
+                  <a href="../">Legal Center</a>
+                </div>
+              </div>
+              <div class="lang-block lang-de">
+                Verwandte Seiten:
+                <div style="margin-top:8px;display:grid;gap:6px;">
+                  <a href="../privacy/">Datenschutz</a>
+                  <a href="../support/">Support</a>
+                  <a href="../impressum/">Impressum</a>
+                  <a href="../">Legal Center</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <article class="card content" aria-label="Terms content">
+          <section id="about">
+            <h2 class="lang-block lang-en">1. About Nura AI</h2>
+            <h2 class="lang-block lang-de">1. Über Nura AI</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                Nura AI is a productivity app to plan tasks, organize your day, and improve focus. Depending on your version and settings,
+                the app may include features such as task lists, reminders, focus sessions, and AI-assisted suggestions.
+              </p>
+              <p>
+                These Terms apply to the app and related services, including our support and legal pages.
+              </p>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Nura AI ist eine Produktivitäts-App für Tasks, Tagesplanung und Fokus. Je nach Version und Einstellungen
+                kann die App u. a. To‑dos, Erinnerungen, Fokus‑Sessions und KI‑Vorschläge enthalten.
+              </p>
+              <p>
+                Diese Bedingungen gelten für die App sowie für zugehörige Services, inkl. Support- und Legal-Seiten.
+              </p>
+            </div>
+          </section>
+
+          <section id="eligibility">
+            <h2 class="lang-block lang-en">2. Eligibility</h2>
+            <h2 class="lang-block lang-de">2. Voraussetzungen</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                You may use the App only if you are legally permitted to do so in your country and you can form a binding contract.
+                If you are under the age required in your jurisdiction, you need permission from a parent or legal guardian.
+              </p>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Du darfst die App nur nutzen, wenn es rechtlich erlaubt ist und du wirksam einen Vertrag schließen kannst.
+                Wenn du unter der erforderlichen Altersgrenze bist, brauchst du die Erlaubnis deiner Eltern/Erziehungsberechtigten.
+              </p>
+            </div>
+          </section>
+
+          <section id="accounts">
+            <h2 class="lang-block lang-en">3. Accounts</h2>
+            <h2 class="lang-block lang-de">3. Accounts</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                Some features require an account (e.g., email sign-in, Apple Sign In, or Google Sign In). You are responsible for:
+              </p>
+              <ul>
+                <li>keeping your credentials secure,</li>
+                <li>all activity under your account, and</li>
+                <li>providing accurate information where required.</li>
+              </ul>
+              <p>If you believe your account is compromised, contact <a href="mailto:support@nura-ai.app">support@nura-ai.app</a>.</p>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Für bestimmte Funktionen brauchst du einen Account (z.B. E-Mail, Apple Login oder Google Login). Du bist verantwortlich für:
+              </p>
+              <ul>
+                <li>die Sicherheit deiner Zugangsdaten,</li>
+                <li>alle Aktivitäten unter deinem Account, und</li>
+                <li>korrekte Angaben, soweit erforderlich.</li>
+              </ul>
+              <p>Wenn du glaubst, dein Account wurde kompromittiert, schreibe an <a href="mailto:support@nura-ai.app">support@nura-ai.app</a>.</p>
+            </div>
+          </section>
+
+          <section id="license">
+            <h2 class="lang-block lang-en">4. License</h2>
+            <h2 class="lang-block lang-de">4. Lizenz</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                We grant you a limited, non-exclusive, non-transferable, revocable license to use the App for personal, non-commercial purposes,
+                in accordance with these Terms and applicable law.
+              </p>
+              <p>
+                You may not copy, modify, distribute, sell, lease, reverse engineer, or attempt to extract the source code of the App,
+                except where such restrictions are prohibited by law.
+              </p>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Wir gewähren dir eine begrenzte, nicht-exklusive, nicht übertragbare und widerrufliche Lizenz zur privaten, nicht kommerziellen Nutzung
+                der App gemäß diesen Bedingungen und geltendem Recht.
+              </p>
+              <p>
+                Du darfst die App nicht kopieren, verändern, verbreiten, verkaufen, vermieten, reverse engineeren oder Quellcode extrahieren,
+                außer soweit gesetzlich erlaubt.
+              </p>
+            </div>
+          </section>
+
+          <section id="acceptable">
+            <h2 class="lang-block lang-en">5. Acceptable Use</h2>
+            <h2 class="lang-block lang-de">5. Erlaubte Nutzung</h2>
+
+            <div class="lang-block lang-en">
+              <p>You agree not to misuse the App. In particular, you must not:</p>
+              <ul>
+                <li>use the App for unlawful, harmful, or abusive purposes,</li>
+                <li>attempt to gain unauthorized access to accounts or systems,</li>
+                <li>interfere with the App’s operation (malware, excessive requests),</li>
+                <li>upload content that infringes rights of others or violates law.</li>
+              </ul>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>Du darfst die App nicht missbrauchen. Insbesondere darfst du nicht:</p>
+              <ul>
+                <li>die App für rechtswidrige, schädliche oder abusive Zwecke nutzen,</li>
+                <li>unbefugt auf Accounts/Systeme zugreifen (oder es versuchen),</li>
+                <li>den Betrieb stören (Malware, extreme Requests),</li>
+                <li>Inhalte hochladen, die Rechte verletzen oder gegen Gesetze verstoßen.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="ai">
+            <h2 class="lang-block lang-en">6. AI features</h2>
+            <h2 class="lang-block lang-de">6. KI-Funktionen</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                The App may include AI features (e.g., converting your text into tasks, planning suggestions, or Q&amp;A).
+                AI features may be powered by external providers such as <strong>OpenAI</strong> and <strong>Google</strong>.
+              </p>
+              <ul>
+                <li><strong>Processing:</strong> AI requests are processed on external servers (not on-device).</li>
+                <li><strong>Data minimization:</strong> we send your prompt and minimal relevant context needed to fulfill the request.</li>
+                <li><strong>Accuracy:</strong> AI output can be incorrect. You should review and confirm tasks, reminders, and plans before relying on them.</li>
+              </ul>
+              <div class="callout">
+                Data processing details are described in the <a href="../privacy/">Privacy Policy</a>.
+              </div>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Die App kann KI-Funktionen enthalten (z.B. Text → Tasks, Plan‑Vorschläge oder Fragen &amp; Antworten).
+                KI-Funktionen können durch externe Anbieter wie <strong>OpenAI</strong> und <strong>Google</strong> bereitgestellt werden.
+              </p>
+              <ul>
+                <li><strong>Verarbeitung:</strong> KI-Anfragen werden auf externen Servern verarbeitet (nicht on-device).</li>
+                <li><strong>Datenminimierung:</strong> wir senden deinen Prompt und minimal nötigen Kontext.</li>
+                <li><strong>Genauigkeit:</strong> KI kann falsch liegen. Bitte Tasks/Erinnerungen/Pläne prüfen, bevor du dich darauf verlässt.</li>
+              </ul>
+              <div class="callout">
+                Details zur Datenverarbeitung stehen in der <a href="../privacy/">Datenschutzerklärung</a>.
+              </div>
+            </div>
+          </section>
+
+          <section id="subscriptions">
+            <h2 class="lang-block lang-en">7. Subscriptions & purchases</h2>
+            <h2 class="lang-block lang-de">7. Abos & Käufe</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                The App may offer optional paid subscriptions or in‑app purchases that unlock premium features (e.g., additional planning tools or AI usage).
+                Purchases are processed by Apple (App Store) or Google (Play Store), and their terms may also apply.
+              </p>
+
+              <p><strong>Billing and renewal</strong></p>
+              <ul>
+                <li>Subscriptions are billed in advance and renew automatically unless canceled.</li>
+                <li>Prices and renewal terms are shown before purchase and may vary by region.</li>
+              </ul>
+
+              <p><strong>Cancellation</strong></p>
+              <ul>
+                <li>You can cancel in your Apple ID / App Store settings or Google Play subscription settings.</li>
+                <li>Deleting the App does not cancel your subscription.</li>
+              </ul>
+
+              <p><strong>Refunds</strong></p>
+              <ul>
+                <li>Refunds are handled by Apple/Google under their policies. We cannot directly issue store refunds.</li>
+              </ul>
+
+              <div class="callout">
+                For subscription access issues, contact <a href="mailto:support@nura-ai.app">support@nura-ai.app</a> and include your platform (Apple/Google) and purchase date.
+              </div>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Die App kann optionale Abos oder In‑App‑Käufe anbieten, die Premium‑Funktionen freischalten (z.B. zusätzliche Planungstools oder KI‑Nutzung).
+                Käufe werden über Apple (App Store) oder Google (Play Store) abgewickelt; deren Bedingungen können zusätzlich gelten.
+              </p>
+
+              <p><strong>Abrechnung & Verlängerung</strong></p>
+              <ul>
+                <li>Abos werden im Voraus abgerechnet und verlängern sich automatisch, sofern nicht gekündigt.</li>
+                <li>Preise und Bedingungen siehst du vor dem Kauf; sie können je Region variieren.</li>
+              </ul>
+
+              <p><strong>Kündigung</strong></p>
+              <ul>
+                <li>Kündige in den Abo‑Einstellungen deines Apple‑IDs/App Store oder bei Google Play.</li>
+                <li>App löschen kündigt kein Abo.</li>
+              </ul>
+
+              <p><strong>Erstattungen</strong></p>
+              <ul>
+                <li>Erstattungen laufen über Apple/Google nach deren Richtlinien. Wir können keine Store‑Refunds direkt auslösen.</li>
+              </ul>
+
+              <div class="callout">
+                Bei Problemen mit Premium: schreibe an <a href="mailto:support@nura-ai.app">support@nura-ai.app</a> (Plattform + Kaufdatum).
+              </div>
+            </div>
+          </section>
+
+          <section id="content">
+            <h2 class="lang-block lang-en">8. Your Content</h2>
+            <h2 class="lang-block lang-de">8. Deine Inhalte</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                “Your Content” includes tasks, notes, schedules, reminders, and other information you enter into the App.
+                You retain ownership of Your Content.
+              </p>
+              <p>
+                You grant us a limited right to process Your Content solely to operate the App (e.g., saving, syncing, displaying),
+                as described in the <a href="../privacy/">Privacy Policy</a>.
+              </p>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                „Deine Inhalte“ sind z.B. Tasks, Notizen, Pläne, Erinnerungen und andere Infos, die du in der App eingibst.
+                Du bleibst Eigentümer deiner Inhalte.
+              </p>
+              <p>
+                Du erlaubst uns, deine Inhalte ausschließlich zur Bereitstellung der App zu verarbeiten (z.B. speichern, synchronisieren, anzeigen),
+                wie in der <a href="../privacy/">Datenschutzerklärung</a> beschrieben.
+              </p>
+            </div>
+          </section>
+
+          <section id="thirdparty">
+            <h2 class="lang-block lang-en">9. Third‑party services</h2>
+            <h2 class="lang-block lang-de">9. Drittanbieter‑Services</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                The App may interact with third‑party services, for example Apple/Google for purchases and sign-in,
+                and infrastructure providers to run the service. Third‑party services are governed by their own terms and privacy policies.
+              </p>
+              <ul>
+                <li><strong>Apple / Google</strong> — purchases and optional sign‑in</li>
+                <li><strong>OpenAI / Google</strong> — AI processing when you use AI features</li>
+              </ul>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Die App kann mit Drittanbietern interagieren, z.B. Apple/Google für Käufe und Login,
+                sowie Infrastruktur-Anbieter für den Betrieb. Drittanbieter haben eigene Bedingungen und Datenschutzrichtlinien.
+              </p>
+              <ul>
+                <li><strong>Apple / Google</strong> — Käufe und optionaler Login</li>
+                <li><strong>OpenAI / Google</strong> — KI-Verarbeitung bei Nutzung der KI-Funktionen</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="availability">
+            <h2 class="lang-block lang-en">10. Availability and changes</h2>
+            <h2 class="lang-block lang-de">10. Verfügbarkeit und Änderungen</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                We may update, change, or discontinue features to improve the App or comply with legal requirements.
+                We do not guarantee the App will always be available or error-free.
+              </p>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Wir können Funktionen aktualisieren, ändern oder einstellen, um die App zu verbessern oder rechtliche Anforderungen zu erfüllen.
+                Wir garantieren keine permanente Verfügbarkeit oder Fehlerfreiheit.
+              </p>
+            </div>
+          </section>
+
+          <section id="termination">
+            <h2 class="lang-block lang-en">11. Termination</h2>
+            <h2 class="lang-block lang-de">11. Beendigung</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                We may suspend or terminate access if you violate these Terms or if required for security or legal reasons.
+                You may stop using the App at any time.
+              </p>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Wir können den Zugriff sperren oder beenden, wenn du gegen diese Bedingungen verstößt oder wenn es aus Sicherheits-/Rechtsgründen nötig ist.
+                Du kannst die Nutzung jederzeit beenden.
+              </p>
+            </div>
+          </section>
+
+          <section id="disclaimer">
+            <h2 class="lang-block lang-en">12. Disclaimer</h2>
+            <h2 class="lang-block lang-de">12. Hinweise / Gewährleistung</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                The App is provided “as is” and “as available”. To the maximum extent permitted by law, we disclaim all warranties.
+              </p>
+              <p>
+                Nura AI is a productivity tool and does not provide medical, legal, or financial advice.
+                AI features may produce incorrect outputs, and you are responsible for how you use suggestions.
+              </p>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Die App wird „wie sie ist“ und „wie verfügbar“ bereitgestellt. Soweit gesetzlich zulässig schließen wir Gewährleistungen aus.
+              </p>
+              <p>
+                Nura AI ist ein Produktivitätstool und bietet keine medizinische, rechtliche oder finanzielle Beratung.
+                KI-Ausgaben können falsch sein; du bist verantwortlich dafür, wie du Vorschläge nutzt.
+              </p>
+            </div>
+          </section>
+
+          <section id="liability">
+            <h2 class="lang-block lang-en">13. Limitation of liability</h2>
+            <h2 class="lang-block lang-de">13. Haftungsbegrenzung</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                To the maximum extent permitted by law, we are not liable for indirect, incidental, special, consequential, or punitive damages,
+                or any loss of profits or data, arising from your use of the App.
+              </p>
+              <p>
+                Nothing in these Terms limits liability for intent, gross negligence, or where liability cannot be excluded by law.
+              </p>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Soweit gesetzlich zulässig haften wir nicht für indirekte/Folgeschäden sowie Daten- oder Gewinnverluste aus der Nutzung der App.
+              </p>
+              <p>
+                Unberührt bleibt Haftung für Vorsatz, grobe Fahrlässigkeit oder zwingende gesetzliche Haftung.
+              </p>
+            </div>
+          </section>
+
+          <section id="law">
+            <h2 class="lang-block lang-en">14. Governing law</h2>
+            <h2 class="lang-block lang-de">14. Anwendbares Recht</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                These Terms are governed by the laws of Germany, excluding conflict of law rules, unless mandatory consumer protection laws in your country apply.
+              </p>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Es gilt deutsches Recht (unter Ausschluss des Kollisionsrechts), soweit nicht zwingende Verbraucherschutzregeln entgegenstehen.
+              </p>
+            </div>
+          </section>
+
+          <section id="eula">
+            <h2 class="lang-block lang-en">15. Apple Standard EULA (iOS)</h2>
+            <h2 class="lang-block lang-de">15. Apple Standard‑EULA (iOS)</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                If you downloaded Nura AI from the Apple App Store, Apple’s Standard EULA may apply in addition to these Terms.
+                You can read it here:
+                <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">
+                  Apple Standard EULA
+                </a>.
+              </p>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Wenn du Nura AI aus dem Apple App Store geladen hast, kann zusätzlich die Apple Standard‑EULA gelten.
+                Du findest sie hier:
+                <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">
+                  Apple Standard‑EULA
+                </a>.
+              </p>
+            </div>
+          </section>
+
+          <section id="contact">
+            <h2 class="lang-block lang-en">16. Contact</h2>
+            <h2 class="lang-block lang-de">16. Kontakt</h2>
+
+            <div class="lang-block lang-en">
+              <p>If you have questions about these Terms, contact:</p>
+            </div>
+            <div class="lang-block lang-de">
+              <p>Bei Fragen zu diesen Bedingungen:</p>
+            </div>
+
+            <div class="kv" role="list">
+              <div class="row" role="listitem">
+                <div class="k">Email</div>
+                <div class="v"><a href="mailto:support@nura-ai.app">support@nura-ai.app</a></div>
+              </div>
+              <div class="row" role="listitem">
+                <div class="k">Address</div>
+                <div class="v">
+                  Khaled Ibrahim Basha<br />
+                  c/o flexdienst – #20304<br />
+                  Kurt-Schumacher-Straße 76<br />
+                  67663 Kaiserslautern<br />
+                  Germany
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <footer>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="../">Legal Center</a>
+          <a href="../privacy/">Privacy</a>
+          <a href="../support/">Support</a>
+          <a href="../impressum/">Impressum</a>
+          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">
+            <span class="lang-block lang-en">Apple Standard EULA</span>
+            <span class="lang-block lang-de">Apple Standard‑EULA</span>
+          </a>
+        </div>
+        <span>© <span id="year"></span> Nura AI</span>
+      </footer>
+    </main>
+
+    <script>
+      (function () {
+        const prefersDe = (navigator.language || "").toLowerCase().startsWith("de");
+        const saved = localStorage.getItem("nura_lang");
+        const initial = saved || (prefersDe ? "de" : "en");
+
+        function setLang(lang) {
+          document.documentElement.setAttribute("data-lang", lang);
+          localStorage.setItem("nura_lang", lang);
+
+          const enBtn = document.getElementById("lang-en");
+          const deBtn = document.getElementById("lang-de");
+          if (enBtn && deBtn) {
+            enBtn.setAttribute("aria-pressed", lang === "en" ? "true" : "false");
+            deBtn.setAttribute("aria-pressed", lang === "de" ? "true" : "false");
+          }
+        }
+
+        const year = document.getElementById("year");
+        if (year) year.textContent = new Date().getFullYear();
+
+        const enBtn = document.getElementById("lang-en");
+        const deBtn = document.getElementById("lang-de");
+        if (enBtn) enBtn.addEventListener("click", () => setLang("en"));
+        if (deBtn) deBtn.addEventListener("click", () => setLang("de"));
+
+        setLang(initial);
+      })();
+    </script>
+  </body>
+</html>

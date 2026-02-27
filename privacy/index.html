@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <title>Nura AI — Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for Nura AI (GDPR). What data we process, why, where it goes (including AI providers), and your rights." />
+
+    <style>
+      :root {
+        --bg:#ffffff;
+        --fg:#0b0b0b;
+        --muted:#4b4b4b;
+        --faint:#6a6a6a;
+        --border:#e9e9e9;
+        --card:#ffffff;
+        --chip:#f6f6f6;
+        --maxw:1080px;
+        --radius:18px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg:#0b0b0b;
+          --fg:#f4f4f4;
+          --muted:#c8c8c8;
+          --faint:#a3a3a3;
+          --border:#1f1f1f;
+          --card:#0f0f0f;
+          --chip:#121212;
+        }
+      }
+
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{
+        margin:0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+        line-height:1.65;
+        color:var(--fg);
+        background:var(--bg);
+      }
+
+      a{color:inherit; text-decoration: underline; text-underline-offset: 3px;}
+      a:hover{opacity:.86}
+
+      .wrap{max-width:var(--maxw); margin:0 auto; padding:26px 16px 72px;}
+
+      .nav{
+        display:flex; align-items:center; justify-content:space-between; gap:12px;
+        padding:12px 14px;
+        border:1px solid var(--border);
+        border-radius:999px;
+        background:var(--card);
+      }
+      .brand{display:flex; align-items:center; gap:10px; min-width:0;}
+      .mark{
+        width:34px; height:34px;
+        border-radius:12px;
+        border:1px solid var(--border);
+        background:var(--chip);
+        display:grid; place-items:center;
+        font-weight:800;
+        letter-spacing:.3px;
+      }
+      .brand-title{display:flex; flex-direction:column; min-width:0;}
+      .brand-title strong{font-size:14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+      .brand-title span{font-size:12px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+      .right{display:flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:flex-end;}
+      .pill{
+        display:inline-flex; align-items:center; gap:8px;
+        padding:8px 10px;
+        border:1px solid var(--border);
+        border-radius:999px;
+        background:var(--chip);
+        font-size:12px;
+        text-decoration:none;
+      }
+
+      .lang-toggle{display:inline-flex; gap:6px; align-items:center;}
+      .lang-btn{
+        appearance:none;
+        border:1px solid var(--border);
+        background:var(--chip);
+        color:var(--fg);
+        font-size:12px;
+        padding:8px 10px;
+        border-radius:999px;
+        cursor:pointer;
+      }
+      .lang-btn[aria-pressed="true"]{
+        background:var(--fg);
+        color:var(--bg);
+        border-color:var(--fg);
+      }
+
+      header.hero{padding:22px 2px 10px;}
+      h1{
+        margin:16px 0 10px;
+        font-size: clamp(30px, 4vw, 50px);
+        line-height: 1.08;
+        letter-spacing: -0.85px;
+      }
+      .sub{
+        margin:0;
+        max-width: 92ch;
+        color:var(--muted);
+        font-size: 15px;
+      }
+
+      .layout{display:grid; grid-template-columns:1fr; gap:14px; margin-top:18px;}
+      @media (min-width: 980px){
+        .layout{grid-template-columns: 0.42fr 0.58fr; align-items:start;}
+      }
+
+      .card{border:1px solid var(--border); border-radius:var(--radius); background:var(--card); overflow:hidden;}
+      .inner{padding:18px 18px;}
+
+      .kicker{margin:0 0 10px; font-size:12px; letter-spacing:.55px; text-transform:uppercase; color:var(--muted);}
+
+      .toc a{
+        display:block;
+        padding:10px 12px;
+        border:1px solid transparent;
+        border-radius:14px;
+        text-decoration:none;
+      }
+      .toc a:hover{background:var(--chip); border-color:var(--border);}
+      .toc small{color:var(--faint); margin-left:6px;}
+
+      .content section{padding:18px 18px; border-top:1px solid var(--border);}
+      .content section:first-of-type{border-top:none}
+      .content h2{margin:0 0 10px; font-size:18px; letter-spacing:-.2px;}
+      .content p{margin:0 0 12px;}
+      .content ul{margin:0 0 12px 18px;}
+      .content li{margin:6px 0;}
+
+      .callout{
+        margin-top:12px;
+        padding:12px 12px;
+        border:1px solid var(--border);
+        border-radius:16px;
+        background:var(--chip);
+        color:var(--muted);
+        font-size:13px;
+      }
+
+      .kv{display:grid; grid-template-columns:1fr; gap:10px; margin-top:10px;}
+      .row{padding:14px 14px; border:1px solid var(--border); border-radius:16px; background:var(--chip);}
+      .k{font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.45px; margin-bottom:4px;}
+      .v{font-size:14px; word-break:break-word;}
+
+      .lang-block{display:none}
+      html[data-lang="en"] .lang-en{display:block}
+      html[data-lang="de"] .lang-de{display:block}
+
+      footer{
+        margin-top:18px;
+        padding:18px 4px 0;
+        color:var(--muted);
+        font-size:13px;
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+        align-items:center;
+        justify-content:space-between;
+      }
+      .footer-links{display:flex; flex-wrap:wrap; gap:10px; align-items:center;}
+      .footer-links a{
+        padding:8px 10px;
+        border-radius:999px;
+        border:1px solid var(--border);
+        background:var(--chip);
+        text-decoration:none;
+      }
+      .footer-links a:hover{opacity:.9}
+
+      @media print {
+        body{background:#fff;color:#000}
+        .nav, .toc, footer{display:none !important}
+        .card{border:none}
+        a{color:#000}
+        .content section{border-top:1px solid #ddd}
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="wrap" id="top">
+      <div class="nav">
+        <div class="brand">
+          <div class="mark" aria-hidden="true">N</div>
+          <div class="brand-title">
+            <strong>Nura AI</strong>
+            <span class="lang-block lang-en">Privacy Policy (GDPR)</span>
+            <span class="lang-block lang-de">Datenschutzerklärung (DSGVO)</span>
+          </div>
+        </div>
+
+        <div class="right">
+          <a class="pill" href="mailto:support@nura-ai.app">support@nura-ai.app</a>
+
+          <div class="lang-toggle" aria-label="Language">
+            <button class="lang-btn" id="lang-en" type="button" aria-pressed="false">EN</button>
+            <button class="lang-btn" id="lang-de" type="button" aria-pressed="false">DE</button>
+          </div>
+
+          <a class="pill" href="../">Legal Center</a>
+
+          <span class="pill">
+            <span class="lang-block lang-en">Last updated: <strong>2026-02-25</strong></span>
+            <span class="lang-block lang-de">Stand: <strong>2026-02-25</strong></span>
+          </span>
+        </div>
+      </div>
+
+      <header class="hero">
+        <div class="lang-block lang-en">
+          <h1>Privacy Policy</h1>
+          <p class="sub">
+            This policy explains what personal data Nura AI processes, why we process it, where it is sent (including AI providers),
+            how long we keep it, and which rights you have under the GDPR.
+          </p>
+        </div>
+        <div class="lang-block lang-de">
+          <h1>Datenschutzerklärung</h1>
+          <p class="sub">
+            Diese Erklärung beschreibt, welche personenbezogenen Daten Nura AI verarbeitet, warum wir das tun, wohin Daten gesendet werden
+            (inkl. KI-Anbieter), wie lange wir speichern und welche Rechte du nach der DSGVO hast.
+          </p>
+        </div>
+
+        <div class="callout" aria-label="Quick answers">
+          <div class="lang-block lang-en">
+            <strong>Quick answers (App Review)</strong>
+            <ul style="margin:10px 0 0 18px;">
+              <li><strong>Personal data collected:</strong> account identifiers (email or Apple/Google sign-in), content you create (tasks, notes, schedules), subscription entitlement info.</li>
+              <li><strong>Sent to our servers:</strong> account + synced content (so your data can be stored and synced across devices).</li>
+              <li><strong>AI data flow:</strong> when you use AI, we transmit your prompt and the minimum relevant context to AI providers.</li>
+              <li><strong>AI providers:</strong> OpenAI and Google (e.g., GPT-family and Gemini-family). Processing happens on external servers (not on-device).</li>
+            </ul>
+          </div>
+
+          <div class="lang-block lang-de">
+            <strong>Kurze Antworten (App Review)</strong>
+            <ul style="margin:10px 0 0 18px;">
+              <li><strong>Erhobene Daten:</strong> Account-IDs (E-Mail oder Apple/Google-Login), Inhalte aus der App (Tasks, Notizen, Pläne), Abo-/Entitlement-Infos.</li>
+              <li><strong>An unsere Server gesendet:</strong> Account- und Sync-Inhalte (damit deine Daten gespeichert und zwischen Geräten synchronisiert werden können).</li>
+              <li><strong>KI-Datenfluss:</strong> bei KI-Anfragen senden wir deinen Prompt und minimal nötigen Kontext an KI-Anbieter.</li>
+              <li><strong>KI-Anbieter:</strong> OpenAI und Google (z.B. GPT- und Gemini-Familie). Verarbeitung auf externen Servern (nicht on-device).</li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <div class="layout">
+        <aside class="card toc" aria-label="Table of contents">
+          <div class="inner">
+            <p class="kicker">Contents</p>
+            <nav class="toc">
+              <a href="#controller">1. <span class="lang-block lang-en">Controller</span><span class="lang-block lang-de">Verantwortlicher</span> <small>Who is responsible</small></a>
+              <a href="#about">2. <span class="lang-block lang-en">About Nura AI</span><span class="lang-block lang-de">Über Nura AI</span> <small>What the app does</small></a>
+              <a href="#data">3. <span class="lang-block lang-en">Data we process</span><span class="lang-block lang-de">Welche Daten</span> <small>Categories</small></a>
+              <a href="#permissions">4. <span class="lang-block lang-en">Permissions</span><span class="lang-block lang-de">Berechtigungen</span> <small>Device access</small></a>
+              <a href="#ai">5. <span class="lang-block lang-en">AI features</span><span class="lang-block lang-de">KI-Funktionen</span> <small>OpenAI / Google</small></a>
+              <a href="#purposes">6. <span class="lang-block lang-en">Purposes & legal bases</span><span class="lang-block lang-de">Zwecke & Rechtsgrundlagen</span> <small>GDPR</small></a>
+              <a href="#sharing">7. <span class="lang-block lang-en">Sharing & providers</span><span class="lang-block lang-de">Empfänger & Dienstleister</span> <small>Third parties</small></a>
+              <a href="#transfers">8. <span class="lang-block lang-en">International transfers</span><span class="lang-block lang-de">Drittländer</span> <small>Outside EU/EEA</small></a>
+              <a href="#security">9. <span class="lang-block lang-en">Security</span><span class="lang-block lang-de">Sicherheit</span> <small>Protection</small></a>
+              <a href="#retention">10. <span class="lang-block lang-en">Retention</span><span class="lang-block lang-de">Speicherdauer</span> <small>How long</small></a>
+              <a href="#rights">11. <span class="lang-block lang-en">Your rights</span><span class="lang-block lang-de">Deine Rechte</span> <small>GDPR rights</small></a>
+              <a href="#deletion">12. <span class="lang-block lang-en">Deletion</span><span class="lang-block lang-de">Löschung</span> <small>Account deletion</small></a>
+              <a href="#children">13. <span class="lang-block lang-en">Children</span><span class="lang-block lang-de">Minderjährige</span> <small>Age limits</small></a>
+              <a href="#website">14. <span class="lang-block lang-en">Legal pages</span><span class="lang-block lang-de">Diese Website</span> <small>Logs</small></a>
+              <a href="#changes">15. <span class="lang-block lang-en">Changes</span><span class="lang-block lang-de">Änderungen</span> <small>Updates</small></a>
+              <a href="#contact">16. <span class="lang-block lang-en">Contact</span><span class="lang-block lang-de">Kontakt</span> <small>Reach us</small></a>
+            </nav>
+
+            <div class="callout">
+              <div class="lang-block lang-en">
+                Related pages:
+                <div style="margin-top:8px;display:grid;gap:6px;">
+                  <a href="../terms/">Terms of Use</a>
+                  <a href="../support/">Support</a>
+                  <a href="../impressum/">Impressum</a>
+                  <a href="../">Legal Center</a>
+                </div>
+              </div>
+              <div class="lang-block lang-de">
+                Verwandte Seiten:
+                <div style="margin-top:8px;display:grid;gap:6px;">
+                  <a href="../terms/">Nutzungsbedingungen</a>
+                  <a href="../support/">Support</a>
+                  <a href="../impressum/">Impressum</a>
+                  <a href="../">Legal Center</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <article class="card content" aria-label="Privacy policy content">
+          <section id="controller">
+            <h2 class="lang-block lang-en">1. Data Controller</h2>
+            <h2 class="lang-block lang-de">1. Verantwortlicher</h2>
+
+            <div class="lang-block lang-en">
+              <p>The controller responsible for processing personal data under the GDPR is:</p>
+            </div>
+            <div class="lang-block lang-de">
+              <p>Verantwortlich im Sinne der DSGVO ist:</p>
+            </div>
+
+            <div class="kv" role="list">
+              <div class="row" role="listitem">
+                <div class="k">Controller</div>
+                <div class="v">Khaled Ibrahim Basha (Nura AI)</div>
+              </div>
+              <div class="row" role="listitem">
+                <div class="k">Address</div>
+                <div class="v">
+                  Khaled Ibrahim Basha<br />
+                  c/o flexdienst – #20304<br />
+                  Kurt-Schumacher-Straße 76<br />
+                  67663 Kaiserslautern<br />
+                  Germany
+                </div>
+              </div>
+              <div class="row" role="listitem">
+                <div class="k">Email</div>
+                <div class="v"><a href="mailto:support@nura-ai.app">support@nura-ai.app</a></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="about">
+            <h2 class="lang-block lang-en">2. About Nura AI</h2>
+            <h2 class="lang-block lang-de">2. Über Nura AI</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                Nura AI is a productivity app that helps you plan tasks, organize schedules, and improve focus.
+                Depending on your version and settings, the app may support features such as:
+              </p>
+              <ul>
+                <li>Task and schedule creation (e.g., “to‑dos”, reminders, focus sessions).</li>
+                <li>Cloud sync across devices (optional, when you sign in).</li>
+                <li>AI-assisted features (optional) such as turning text into tasks and suggestions for planning.</li>
+              </ul>
+              <p>This policy applies to the Nura AI app and to our legal/support pages.</p>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Nura AI ist eine Produktivitäts-App zum Planen von Tasks, Organisieren von Zeitplänen und Verbessern des Fokus.
+                Je nach Version und Einstellungen kann die App u. a. folgende Funktionen anbieten:
+              </p>
+              <ul>
+                <li>Tasks und Pläne erstellen (z.B. To‑dos, Erinnerungen, Fokus-Sessions).</li>
+                <li>Cloud‑Sync zwischen Geräten (optional, wenn du dich anmeldest).</li>
+                <li>KI‑Funktionen (optional) z.B. Text → Tasks und Plan‑Vorschläge.</li>
+              </ul>
+              <p>Diese Erklärung gilt für die Nura AI App sowie für unsere Legal-/Support-Seiten.</p>
+            </div>
+          </section>
+
+          <section id="data">
+            <h2 class="lang-block lang-en">3. Data we process</h2>
+            <h2 class="lang-block lang-de">3. Welche Daten wir verarbeiten</h2>
+
+            <div class="lang-block lang-en">
+              <p><strong>A) Account & authentication data</strong></p>
+              <ul>
+                <li>Email address (if you use email sign-in or contact support).</li>
+                <li>Apple Sign In / Google Sign In identifiers (technical IDs used for login).</li>
+                <li>Optional profile information you enter (e.g., display name).</li>
+              </ul>
+
+              <p><strong>B) Your content in the app</strong></p>
+              <ul>
+                <li>Tasks, reminders, goals, notes, schedules, and similar content you create.</li>
+                <li>Preferences and settings (e.g., focus timer settings, app preferences).</li>
+              </ul>
+
+              <p><strong>C) Sync & technical data</strong></p>
+              <ul>
+                <li>Identifiers needed to keep your account and synced data consistent (e.g., internal user ID).</li>
+                <li>Basic device/app information for troubleshooting (e.g., app version, approximate device model, operating system version).</li>
+                <li>Security-related logs (e.g., authentication events), to prevent abuse and protect accounts.</li>
+              </ul>
+
+              <p><strong>D) Subscription & purchase data</strong></p>
+              <ul>
+                <li>Subscription status and entitlements (active/inactive; product identifiers).</li>
+                <li>Transaction references needed to verify premium access.</li>
+                <li>Payments are processed by Apple (App Store) or Google (Play Store). We do <strong>not</strong> receive full payment card details.</li>
+              </ul>
+
+              <p><strong>E) Support communications</strong></p>
+              <ul>
+                <li>If you contact support, we process the information you send (message content, email address, attachments).</li>
+              </ul>
+
+              <div class="callout">
+                <strong>What we do not collect (current version)</strong><br />
+                We do not collect precise location, contact lists, photos, microphone recordings, or health data unless we add such
+                features in the future and update this policy.
+              </div>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p><strong>A) Account- & Login-Daten</strong></p>
+              <ul>
+                <li>E-Mail-Adresse (bei E-Mail-Login oder Support-Kontakt).</li>
+                <li>Apple-/Google-Login-IDs (technische Kennungen für die Anmeldung).</li>
+                <li>Optional: Profilangaben (z.B. Anzeigename).</li>
+              </ul>
+
+              <p><strong>B) Deine Inhalte in der App</strong></p>
+              <ul>
+                <li>Tasks, Erinnerungen, Ziele, Notizen, Zeitpläne und ähnliche Inhalte, die du erstellst.</li>
+                <li>Einstellungen/Präferenzen (z.B. Fokus-Timer, App-Einstellungen).</li>
+              </ul>
+
+              <p><strong>C) Sync- & technische Daten</strong></p>
+              <ul>
+                <li>Kennungen zur Zuordnung deines Accounts und zur Synchronisation (z.B. interne User-ID).</li>
+                <li>Basis-Infos zur Fehleranalyse (z.B. App-Version, grobes Gerätemodell, Betriebssystem-Version).</li>
+                <li>Sicherheits-Logs (z.B. Auth-Events) zur Missbrauchsprävention und zum Account-Schutz.</li>
+              </ul>
+
+              <p><strong>D) Abo- & Kaufdaten</strong></p>
+              <ul>
+                <li>Abo-Status und Entitlements (aktiv/inaktiv; Produkt-IDs).</li>
+                <li>Transaktionsreferenzen zur Freischaltung von Premium.</li>
+                <li>Zahlungen laufen über Apple (App Store) oder Google (Play Store). Wir erhalten <strong>keine</strong> vollständigen Kartendaten.</li>
+              </ul>
+
+              <p><strong>E) Support-Kommunikation</strong></p>
+              <ul>
+                <li>Wenn du Support kontaktierst, verarbeiten wir die von dir gesendeten Infos (Text, E-Mail, Anhänge).</li>
+              </ul>
+
+              <div class="callout">
+                <strong>Was wir aktuell nicht erheben</strong><br />
+                Wir erheben keine präzisen Standortdaten, Kontaktlisten, Fotos, Mikrofonaufnahmen oder Gesundheitsdaten – außer wir führen
+                solche Funktionen später ein und aktualisieren diese Erklärung.
+              </div>
+            </div>
+          </section>
+
+          <section id="permissions">
+            <h2 class="lang-block lang-en">4. App permissions (device access)</h2>
+            <h2 class="lang-block lang-de">4. App-Berechtigungen (Gerätezugriff)</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                Depending on the features you use, Nura AI may request certain device permissions.
+                You can control permissions in your device settings at any time.
+              </p>
+              <ul>
+                <li><strong>Notifications</strong> (optional) — to send reminders and focus timer alerts.</li>
+                <li><strong>Calendar access</strong> (optional, if enabled) — to read/write calendar entries you choose to sync or create.</li>
+                <li><strong>Network access</strong> — to sync data and deliver AI responses.</li>
+              </ul>
+              <div class="callout">
+                We request permissions only when the related feature is used. If you deny a permission, the feature may be limited.
+              </div>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Je nach genutzten Funktionen kann Nura AI bestimmte Berechtigungen anfragen.
+                Du kannst Berechtigungen jederzeit in den Geräteeinstellungen steuern.
+              </p>
+              <ul>
+                <li><strong>Mitteilungen</strong> (optional) — für Erinnerungen und Fokus-Timer Benachrichtigungen.</li>
+                <li><strong>Kalenderzugriff</strong> (optional, falls aktiviert) — um ausgewählte Kalendereinträge zu lesen/schreiben.</li>
+                <li><strong>Netzwerkzugriff</strong> — für Sync und KI-Antworten.</li>
+              </ul>
+              <div class="callout">
+                Berechtigungen werden nur angefragt, wenn du die passende Funktion nutzt. Wenn du ablehnst, kann die Funktion eingeschränkt sein.
+              </div>
+            </div>
+          </section>
+
+          <section id="ai">
+            <h2 class="lang-block lang-en">5. AI features (OpenAI / Google)</h2>
+            <h2 class="lang-block lang-de">5. KI-Funktionen (OpenAI / Google)</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                Nura AI may offer AI features (e.g., converting text into tasks, scheduling suggestions, or Q&amp;A).
+                AI requests are processed by external providers.
+              </p>
+
+              <p><strong>Which AI models are used?</strong></p>
+              <ul>
+                <li>We use AI models provided by <strong>OpenAI</strong> and <strong>Google</strong> (e.g., GPT-family and Gemini-family).</li>
+                <li>The exact model can change over time (quality, cost, and safety reasons).</li>
+              </ul>
+
+              <p><strong>Where does processing happen?</strong></p>
+              <ul>
+                <li>AI processing happens on external servers operated by those providers (not on-device).</li>
+              </ul>
+
+              <p><strong>What data is transmitted for AI requests?</strong></p>
+              <ul>
+                <li>Your prompt / message.</li>
+                <li>Only the minimum relevant context needed for the feature (for example: selected task text, selected schedule items).</li>
+                <li>Technical metadata required to deliver the response (basic request logs).</li>
+              </ul>
+
+              <p><strong>What we do not intentionally send</strong></p>
+              <ul>
+                <li>Your entire database/export.</li>
+                <li>Payment card details (we never have them).</li>
+              </ul>
+
+              <div class="callout">
+                <strong>Important:</strong> AI output can be inaccurate. Please verify important information (deadlines, school/work decisions, legal/medical topics).
+              </div>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Nura AI kann KI-Funktionen anbieten (z.B. Text → Tasks, Plan-Vorschläge, Fragen &amp; Antworten).
+                KI-Anfragen werden durch externe Anbieter verarbeitet.
+              </p>
+
+              <p><strong>Welche KI-Modelle werden genutzt?</strong></p>
+              <ul>
+                <li>Wir nutzen KI-Modelle von <strong>OpenAI</strong> und <strong>Google</strong> (z.B. GPT- und Gemini-Familie).</li>
+                <li>Das genaue Modell kann sich ändern (Qualität, Kosten, Sicherheit).</li>
+              </ul>
+
+              <p><strong>Wo findet die Verarbeitung statt?</strong></p>
+              <ul>
+                <li>Die KI-Verarbeitung passiert auf externen Servern dieser Anbieter (nicht auf dem Gerät).</li>
+              </ul>
+
+              <p><strong>Welche Daten werden übertragen?</strong></p>
+              <ul>
+                <li>Dein Prompt / deine Nachricht.</li>
+                <li>Nur minimal nötiger Kontext für die Funktion (z.B. ausgewählter Task-Text, ausgewählte Pläne).</li>
+                <li>Technische Metadaten zur Auslieferung (Basis-Logs).</li>
+              </ul>
+
+              <p><strong>Was wir nicht absichtlich senden</strong></p>
+              <ul>
+                <li>Deine komplette Datenbank / einen kompletten Export.</li>
+                <li>Zahlungs-/Kartendaten (haben wir nicht).</li>
+              </ul>
+
+              <div class="callout">
+                <strong>Wichtig:</strong> KI kann falsch liegen. Bitte wichtige Dinge prüfen (Deadlines, Schule/Job, Recht/Medizin).
+              </div>
+            </div>
+          </section>
+
+          <section id="purposes">
+            <h2 class="lang-block lang-en">6. Purposes and legal bases (GDPR)</h2>
+            <h2 class="lang-block lang-de">6. Zwecke und Rechtsgrundlagen (DSGVO)</h2>
+
+            <div class="lang-block lang-en">
+              <p>We process personal data for:</p>
+              <ul>
+                <li>Providing and operating core app features (accounts, syncing, settings).</li>
+                <li>Authenticating users and securing accounts.</li>
+                <li>Validating subscriptions and providing premium access.</li>
+                <li>Providing support and responding to requests.</li>
+                <li>Maintaining security, preventing abuse, and troubleshooting.</li>
+              </ul>
+
+              <p><strong>Legal bases</strong></p>
+              <ul>
+                <li><strong>Art. 6(1)(b) GDPR</strong> — performance of a contract (providing the app features you request).</li>
+                <li><strong>Art. 6(1)(f) GDPR</strong> — legitimate interests (security, abuse prevention, service improvement).</li>
+                <li><strong>Art. 6(1)(c) GDPR</strong> — legal obligations (if applicable).</li>
+                <li><strong>Art. 6(1)(a) GDPR</strong> — consent (only where required for optional features).</li>
+              </ul>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>Wir verarbeiten personenbezogene Daten für:</p>
+              <ul>
+                <li>Bereitstellung und Betrieb der App (Account, Sync, Einstellungen).</li>
+                <li>Authentifizierung und Account-Schutz.</li>
+                <li>Abo-Prüfung und Premium-Freischaltung.</li>
+                <li>Support und Beantwortung von Anfragen.</li>
+                <li>Sicherheit, Missbrauchsprävention und Fehlerbehebung.</li>
+              </ul>
+
+              <p><strong>Rechtsgrundlagen</strong></p>
+              <ul>
+                <li><strong>Art. 6 Abs. 1 lit. b DSGVO</strong> — Vertragserfüllung.</li>
+                <li><strong>Art. 6 Abs. 1 lit. f DSGVO</strong> — berechtigte Interessen (Sicherheit, Missbrauchsschutz, Verbesserung).</li>
+                <li><strong>Art. 6 Abs. 1 lit. c DSGVO</strong> — rechtliche Pflichten (falls anwendbar).</li>
+                <li><strong>Art. 6 Abs. 1 lit. a DSGVO</strong> — Einwilligung (nur wenn erforderlich).</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="sharing">
+            <h2 class="lang-block lang-en">7. Sharing and third-party providers</h2>
+            <h2 class="lang-block lang-de">7. Weitergabe und Dienstleister</h2>
+
+            <div class="lang-block lang-en">
+              <p>We share data only when needed to run the app and deliver the features you use.</p>
+              <p><strong>Typical providers used by Nura AI</strong></p>
+              <ul>
+                <li><strong>Supabase</strong> — authentication and database hosting (account + synced app content).</li>
+                <li><strong>RevenueCat</strong> — subscription and entitlement verification (premium access).</li>
+                <li><strong>Apple / Google</strong> — purchase processing in the App Store / Play Store and optional sign-in.</li>
+                <li><strong>OpenAI / Google</strong> — AI processing when you use AI features.</li>
+              </ul>
+              <div class="callout">
+                Apple and Google may process certain data as independent controllers under their own policies (e.g., store purchase processing).
+              </div>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>Wir geben Daten nur weiter, wenn es für den Betrieb der App und die von dir genutzten Funktionen nötig ist.</p>
+              <p><strong>Typische Dienstleister bei Nura AI</strong></p>
+              <ul>
+                <li><strong>Supabase</strong> — Authentifizierung und Datenbankhosting (Account + Sync-Inhalte).</li>
+                <li><strong>RevenueCat</strong> — Abo- und Entitlement-Prüfung (Premiumzugang).</li>
+                <li><strong>Apple / Google</strong> — Zahlungsabwicklung in App Store / Play Store und optional Login.</li>
+                <li><strong>OpenAI / Google</strong> — KI-Verarbeitung bei Nutzung der KI-Funktionen.</li>
+              </ul>
+              <div class="callout">
+                Apple/Google können Daten teils als eigene Verantwortliche nach ihren Richtlinien verarbeiten (z.B. Store-Käufe).
+              </div>
+            </div>
+          </section>
+
+          <section id="transfers">
+            <h2 class="lang-block lang-en">8. International transfers</h2>
+            <h2 class="lang-block lang-de">8. Drittlandübermittlungen</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                Depending on provider infrastructure and configuration, processing may occur in the EU/EEA or in other countries.
+                Where required, we rely on appropriate safeguards (such as adequacy decisions or Standard Contractual Clauses).
+              </p>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Je nach Infrastruktur/Konfiguration kann Verarbeitung in der EU/EWR oder in anderen Ländern stattfinden.
+                Wenn erforderlich, nutzen wir geeignete Garantien (z.B. Angemessenheitsbeschluss oder Standardvertragsklauseln).
+              </p>
+            </div>
+          </section>
+
+          <section id="security">
+            <h2 class="lang-block lang-en">9. Security</h2>
+            <h2 class="lang-block lang-de">9. Sicherheit</h2>
+
+            <div class="lang-block lang-en">
+              <p>We apply reasonable technical and organizational measures to protect your data, including:</p>
+              <ul>
+                <li>Encrypted transport (HTTPS/TLS).</li>
+                <li>Authentication and access controls.</li>
+                <li>Data minimization (collect only what is needed).</li>
+              </ul>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>Wir setzen angemessene technische und organisatorische Maßnahmen ein, z.B.:</p>
+              <ul>
+                <li>Verschlüsselte Übertragung (HTTPS/TLS).</li>
+                <li>Authentifizierung und Zugriffskontrollen.</li>
+                <li>Datenminimierung (nur nötige Daten).</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="retention">
+            <h2 class="lang-block lang-en">10. Data retention</h2>
+            <h2 class="lang-block lang-de">10. Speicherdauer</h2>
+
+            <div class="lang-block lang-en">
+              <p>We retain data only as long as necessary for the purposes described:</p>
+              <ul>
+                <li>Account data and synced content: while your account is active.</li>
+                <li>Support emails: as needed to resolve issues and maintain support history.</li>
+                <li>Some records may be retained if required by law (e.g., accounting-related documentation).</li>
+              </ul>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>Wir speichern Daten nur so lange, wie es für die genannten Zwecke erforderlich ist:</p>
+              <ul>
+                <li>Accountdaten und Sync-Inhalte: solange dein Account aktiv ist.</li>
+                <li>Support-E-Mails: solange es für Support/Verlauf sinnvoll ist.</li>
+                <li>Manche Unterlagen können gesetzlich bedingt länger gespeichert werden (z.B. Buchhaltung).</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="rights">
+            <h2 class="lang-block lang-en">11. Your rights (GDPR)</h2>
+            <h2 class="lang-block lang-de">11. Deine Rechte (DSGVO)</h2>
+
+            <div class="lang-block lang-en">
+              <p>If you are located in the EU/EEA, you have the right to:</p>
+              <ul>
+                <li>Access your personal data.</li>
+                <li>Correct inaccurate data.</li>
+                <li>Request deletion (where applicable).</li>
+                <li>Restrict processing.</li>
+                <li>Data portability.</li>
+                <li>Object to processing based on legitimate interests.</li>
+                <li>Withdraw consent at any time (if processing is based on consent).</li>
+              </ul>
+              <p>To exercise your rights, contact <a href="mailto:support@nura-ai.app">support@nura-ai.app</a>.</p>
+              <div class="callout">
+                You also have the right to lodge a complaint with a supervisory authority (e.g., a German state data protection authority).
+              </div>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>Wenn du in der EU/EWR bist, hast du u.a. das Recht auf:</p>
+              <ul>
+                <li>Auskunft.</li>
+                <li>Berichtigung.</li>
+                <li>Löschung (soweit anwendbar).</li>
+                <li>Einschränkung der Verarbeitung.</li>
+                <li>Datenübertragbarkeit.</li>
+                <li>Widerspruch bei Verarbeitung auf Basis berechtigter Interessen.</li>
+                <li>Widerruf einer Einwilligung (falls anwendbar).</li>
+              </ul>
+              <p>Zur Ausübung deiner Rechte: <a href="mailto:support@nura-ai.app">support@nura-ai.app</a>.</p>
+              <div class="callout">
+                Du kannst dich außerdem bei einer Datenschutzaufsichtsbehörde beschweren.
+              </div>
+            </div>
+          </section>
+
+          <section id="deletion">
+            <h2 class="lang-block lang-en">12. Account deletion</h2>
+            <h2 class="lang-block lang-de">12. Account löschen</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                If available in your app version, you can delete your account via <strong>Settings → Delete Account</strong>.
+                If you cannot access the app, request deletion via email at <a href="mailto:support@nura-ai.app">support@nura-ai.app</a>.
+              </p>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Wenn verfügbar, kannst du deinen Account in der App unter <strong>Einstellungen → Account löschen</strong> löschen.
+                Wenn du keinen Zugriff hast, schreibe an <a href="mailto:support@nura-ai.app">support@nura-ai.app</a>.
+              </p>
+            </div>
+          </section>
+
+          <section id="children">
+            <h2 class="lang-block lang-en">13. Children</h2>
+            <h2 class="lang-block lang-de">13. Minderjährige</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                The app is not intended for children under the age required to consent to data processing under applicable law.
+                In Germany, this age may be 16 in certain cases. If you believe a child provided personal data, contact us.
+              </p>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Die App ist nicht für Kinder gedacht, die nach geltendem Recht noch nicht wirksam einwilligen können.
+                In Deutschland kann diese Altersgrenze in bestimmten Fällen 16 Jahre betragen. Wenn du glaubst, dass ein Kind Daten gesendet hat, kontaktiere uns.
+              </p>
+            </div>
+          </section>
+
+          <section id="website">
+            <h2 class="lang-block lang-en">14. Our legal/support pages</h2>
+            <h2 class="lang-block lang-de">14. Unsere Legal-/Support-Seiten</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                When you visit these legal/support pages, our hosting provider may process basic server logs
+                (e.g., IP address, timestamp, requested page) to deliver the website and protect against abuse.
+              </p>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Beim Besuch dieser Legal-/Support-Seiten kann unser Hosting-Anbieter Basis-Serverlogs verarbeiten
+                (z.B. IP-Adresse, Zeitpunkt, aufgerufene Seite), um die Website auszuliefern und Missbrauch zu verhindern.
+              </p>
+            </div>
+          </section>
+
+          <section id="changes">
+            <h2 class="lang-block lang-en">15. Changes to this policy</h2>
+            <h2 class="lang-block lang-de">15. Änderungen dieser Erklärung</h2>
+
+            <div class="lang-block lang-en">
+              <p>
+                We may update this policy from time to time. We will publish the updated version on this page and update the “Last updated” date.
+              </p>
+            </div>
+
+            <div class="lang-block lang-de">
+              <p>
+                Wir können diese Erklärung aktualisieren. Die neue Version wird hier veröffentlicht und das Datum aktualisiert.
+              </p>
+            </div>
+          </section>
+
+          <section id="contact">
+            <h2 class="lang-block lang-en">16. Contact</h2>
+            <h2 class="lang-block lang-de">16. Kontakt</h2>
+
+            <div class="lang-block lang-en">
+              <p>If you have questions about this policy, contact:</p>
+            </div>
+            <div class="lang-block lang-de">
+              <p>Bei Fragen erreichst du uns hier:</p>
+            </div>
+
+            <div class="kv" role="list">
+              <div class="row" role="listitem">
+                <div class="k">Email</div>
+                <div class="v"><a href="mailto:support@nura-ai.app">support@nura-ai.app</a></div>
+              </div>
+              <div class="row" role="listitem">
+                <div class="k">Address</div>
+                <div class="v">
+                  Khaled Ibrahim Basha<br />
+                  c/o flexdienst – #20304<br />
+                  Kurt-Schumacher-Straße 76<br />
+                  67663 Kaiserslautern<br />
+                  Germany
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <footer>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="../">Legal Center</a>
+          <a href="../terms/">Terms</a>
+          <a href="../support/">Support</a>
+          <a href="../impressum/">Impressum</a>
+          <a href="mailto:support@nura-ai.app">Contact</a>
+        </div>
+        <span>© <span id="year"></span> Nura AI</span>
+      </footer>
+    </main>
+
+    <script>
+      (function () {
+        const prefersDe = (navigator.language || "").toLowerCase().startsWith("de");
+        const saved = localStorage.getItem("nura_lang");
+        const initial = saved || (prefersDe ? "de" : "en");
+
+        function setLang(lang) {
+          document.documentElement.setAttribute("data-lang", lang);
+          localStorage.setItem("nura_lang", lang);
+
+          const enBtn = document.getElementById("lang-en");
+          const deBtn = document.getElementById("lang-de");
+          if (enBtn && deBtn) {
+            enBtn.setAttribute("aria-pressed", lang === "en" ? "true" : "false");
+            deBtn.setAttribute("aria-pressed", lang === "de" ? "true" : "false");
+          }
+        }
+
+        const year = document.getElementById("year");
+        if (year) year.textContent = new Date().getFullYear();
+
+        const enBtn = document.getElementById("lang-en");
+        const deBtn = document.getElementById("lang-de");
+        if (enBtn) enBtn.addEventListener("click", () => setLang("en"));
+        if (deBtn) deBtn.addEventListener("click", () => setLang("de"));
+
+        setLang(initial);
+      })();
+    </script>
+  </body>
+</html>

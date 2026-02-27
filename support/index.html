@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>Nura AI — Support</title>
+    <meta name="description" content="Support page for Nura AI." />
+    
+    <style>
+:root{
+      --bg:#ffffff;
+      --fg:#0f0f0f;
+      --muted:#4b4b4b;
+      --faint:#6a6a6a;
+      --border:#e6e6e6;
+      --card:#ffffff;
+      --chip:#f6f6f6;
+      --link:#0f0f0f;
+      --maxw:980px;
+      --radius:16px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b0b0b;
+        --fg:#f3f3f3;
+        --muted:#c7c7c7;
+        --faint:#a3a3a3;
+        --border:#1f1f1f;
+        --card:#0f0f0f;
+        --chip:#121212;
+        --link:#f3f3f3;
+      }
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.65;
+      color:var(--fg);
+      background:var(--bg);
+    }
+    a{color:var(--link);text-decoration:underline;text-underline-offset:3px}
+    a:hover{opacity:.85}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:28px 16px 56px}
+    .topbar{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:12px 14px;border:1px solid var(--border);border-radius:999px;background:var(--card);
+    }
+    .brand{display:flex;align-items:center;gap:10px;min-width:0}
+    .mark{
+      width:34px;height:34px;border-radius:12px;border:1px solid var(--border);
+      background:var(--chip);display:grid;place-items:center;font-weight:800;letter-spacing:.5px
+    }
+    .brand-title{display:flex;flex-direction:column;min-width:0}
+    .brand-title strong{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .brand-title span{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .chips{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .chip{
+      display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--border);
+      border-radius:999px;background:var(--chip);color:var(--fg);font-size:12px;text-decoration:none
+    }
+    .lang-toggle{display:inline-flex;gap:6px;align-items:center}
+    .lang-btn{
+      appearance:none;border:1px solid var(--border);background:var(--chip);color:var(--fg);
+      font-size:12px;padding:8px 10px;border-radius:999px;cursor:pointer
+    }
+    .lang-btn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+    header.hero{padding:18px 2px 8px}
+    h1{margin:14px 0 8px;font-size:clamp(26px,3.4vw,42px);line-height:1.12;letter-spacing:-.6px}
+    p.lead{margin:0;color:var(--muted);max-width:90ch;font-size:15px}
+    .grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:16px}
+    @media (min-width:980px){
+      .grid.cols{grid-template-columns:.40fr .60fr;align-items:start}
+      .grid.two{grid-template-columns:1.1fr .9fr;align-items:start}
+    }
+    .card{border:1px solid var(--border);border-radius:var(--radius);background:var(--card);overflow:hidden}
+    .card .inner{padding:16px 16px}
+    h2.section-title{margin:0 0 10px;font-size:12px;letter-spacing:.55px;text-transform:uppercase;color:var(--muted)}
+    .toc a{display:block;padding:10px 10px;border-radius:12px;text-decoration:none;border:1px solid transparent;color:var(--fg)}
+    .toc a:hover{background:var(--chip);border-color:var(--border)}
+    .toc small{color:var(--faint);margin-left:6px}
+    .content section{padding:18px 16px;border-top:1px solid var(--border)}
+    .content section:first-of-type{border-top:none}
+    .content h3{margin:0 0 10px;font-size:18px;letter-spacing:-.2px}
+    .content p{margin:0 0 12px}
+    .content ul{margin:0 0 12px 18px}
+    .content li{margin:6px 0}
+    .callout{
+      padding:12px 12px;border:1px solid var(--border);border-radius:14px;background:var(--chip);
+      color:var(--muted);font-size:13px;margin-top:10px
+    }
+    .kv{display:grid;grid-template-columns:1fr;gap:10px;margin-top:10px}
+    .kv .row{padding:12px 12px;border:1px solid var(--border);border-radius:14px;background:var(--chip)}
+    .kv .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.45px;margin-bottom:4px}
+    .kv .v{font-size:14px;word-break:break-word}
+    .links{display:grid;gap:10px}
+    .link-card{
+      display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 12px;
+      border:1px solid var(--border);border-radius:14px;background:var(--chip);text-decoration:none;color:var(--fg)
+    }
+    .link-card:hover{opacity:.9}
+    .link-card strong{font-size:15px}
+    .link-card span{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+    .arrow{color:var(--faint);font-size:18px}
+    .lang-block{display:none}
+    html[data-lang="en"] .lang-en{display:block}
+    html[data-lang="de"] .lang-de{display:block}
+    footer{
+      margin-top:18px;padding:16px 4px 0;color:var(--muted);font-size:13px;
+      display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between
+    }
+    .footer-links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+    .footer-links a{
+      padding:8px 10px;border-radius:999px;border:1px solid var(--border);background:var(--chip);text-decoration:none
+    }
+    .footer-links a:hover{opacity:.9}
+    @media print{
+      body{background:#fff;color:#000}
+      .topbar,footer,.toc{display:none !important}
+      .card{border:none}
+      a{color:#000}
+      .content section{border-top:1px solid #ddd}
+    }
+    </style>
+  </head>
+  <body>
+
+    <main class="wrap" id="top">
+      
+      <div class="topbar">
+        <div class="brand">
+          <div class="mark" aria-hidden="true">N</div>
+          <div class="brand-title">
+            <strong>Nura AI</strong>
+            <span>Support / Hilfe</span>
+          </div>
+        </div>
+        <div class="chips">
+          <a class="chip" href="mailto:support@nura-ai.app">support@nura-ai.app</a>
+          <div class="lang-toggle" aria-label="Language">
+            <button class="lang-btn" id="lang-en" type="button" aria-pressed="false">EN</button>
+            <button class="lang-btn" id="lang-de" type="button" aria-pressed="false">DE</button>
+          </div>
+          <a class="chip" href="../">Legal Center</a>
+          <span class="chip">Last updated: <strong>2026-02-25</strong></span>
+        </div>
+      </div>
+
+      <header class="hero">
+        <div class="lang-block lang-en">
+          <h1>Support</h1>
+          <p class="lead">Help center for Nura AI — contact options, troubleshooting, subscriptions, and common questions.</p>
+        </div>
+        <div class="lang-block lang-de">
+          <h1>Support</h1>
+          <p class="lead">Hilfe für Nura AI — Kontakt, Troubleshooting, Abos und häufige Fragen.</p>
+        </div>
+      </header>
+
+      <div class="grid two">
+        <section class="card">
+          <div class="inner content">
+            <section>
+              <h3>Contact / Kontakt</h3>
+              <div class="lang-block lang-en">
+                <p>Email us and include as much detail as possible (device, iOS/Android version, what you expected, what happened).</p>
+              </div>
+              <div class="lang-block lang-de">
+                <p>Schreib uns per Mail und gib möglichst viele Infos (Gerät, iOS/Android-Version, Erwartung, was passiert ist).</p>
+              </div>
+
+              <div class="kv">
+                <div class="row">
+                  <div class="k">Email</div>
+                  <div class="v"><a href="mailto:support@nura-ai.app">support@nura-ai.app</a></div>
+                </div>
+                <div class="row">
+                  <div class="k">Response time</div>
+                  <div class="v">
+                    <span class="lang-block lang-en">We aim to reply within a few business days.</span>
+                    <span class="lang-block lang-de">Wir antworten normalerweise innerhalb weniger Werktage.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="callout">
+                <span class="lang-block lang-en"><strong>Tip:</strong> If possible, attach a screenshot or screen recording.</span>
+                <span class="lang-block lang-de"><strong>Tipp:</strong> Wenn möglich, schick einen Screenshot oder eine Bildschirmaufnahme.</span>
+              </div>
+            </section>
+
+            <section>
+              <h3>Subscriptions / Abos</h3>
+              <div class="lang-block lang-en">
+                <ul>
+                  <li><strong>Cancel:</strong> via App Store / Google Play subscription settings.</li>
+                  <li><strong>App deleted?</strong> Deleting the app does not cancel your subscription.</li>
+                  <li><strong>Refunds:</strong> handled by Apple/Google according to their policies.</li>
+                  <li><strong>Premium not unlocked?</strong> Contact support with your purchase date and platform (Apple/Google).</li>
+                </ul>
+              </div>
+              <div class="lang-block lang-de">
+                <ul>
+                  <li><strong>Kündigen:</strong> über Abo-Einstellungen im App Store / Google Play.</li>
+                  <li><strong>App gelöscht?</strong> App löschen kündigt kein Abo.</li>
+                  <li><strong>Erstattung:</strong> läuft über Apple/Google nach deren Richtlinien.</li>
+                  <li><strong>Premium fehlt?</strong> Schreib Support mit Kaufdatum und Plattform (Apple/Google).</li>
+                </ul>
+              </div>
+            </section>
+
+            <section>
+              <h3>Account & sync / Account & Sync</h3>
+              <div class="lang-block lang-en">
+                <ul>
+                  <li><strong>Can’t log in:</strong> check you used the same login method (Apple vs Google vs email).</li>
+                  <li><strong>Sync issues:</strong> confirm you’re online and signed in on both devices.</li>
+                  <li><strong>Delete account:</strong> in the app (Settings → Delete Account) or request via email.</li>
+                </ul>
+              </div>
+              <div class="lang-block lang-de">
+                <ul>
+                  <li><strong>Login klappt nicht:</strong> prüfe, ob du die gleiche Methode nutzt (Apple vs Google vs E-Mail).</li>
+                  <li><strong>Sync-Probleme:</strong> Internet prüfen und auf beiden Geräten eingeloggt sein.</li>
+                  <li><strong>Account löschen:</strong> in der App (Einstellungen → Account löschen) oder per Mail anfragen.</li>
+                </ul>
+              </div>
+            </section>
+
+            <section>
+              <h3>AI questions / KI-Fragen</h3>
+              <div class="lang-block lang-en">
+                <p>
+                  Nura AI uses AI models from <strong>OpenAI</strong> and <strong>Google</strong>.
+                  Processing happens on external servers (not on-device). We send your prompt and minimal needed context.
+                  More details: <a href="../privacy/">Privacy Policy</a>.
+                </p>
+              </div>
+              <div class="lang-block lang-de">
+                <p>
+                  Nura AI nutzt KI-Modelle von <strong>OpenAI</strong> und <strong>Google</strong>.
+                  Die Verarbeitung passiert auf externen Servern (nicht auf dem Gerät). Wir senden deinen Prompt + minimal nötigen Kontext.
+                  Details: <a href="../privacy/">Datenschutz</a>.
+                </p>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <aside class="card">
+          <div class="inner">
+            <h2 class="section-title">Quick checklist</h2>
+
+            <div class="lang-block lang-en">
+              <ul style="margin:0 0 12px 18px;">
+                <li>Update the app to the latest version.</li>
+                <li>Restart the app (force close) and try again.</li>
+                <li>Check your internet connection.</li>
+                <li>If something looks wrong: screenshot + email support.</li>
+              </ul>
+              <div class="callout">
+                If you want to report a bug, include:
+                <ul style="margin:8px 0 0 18px;">
+                  <li>Device model</li>
+                  <li>OS version</li>
+                  <li>Steps to reproduce</li>
+                  <li>Expected vs actual behavior</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="lang-block lang-de">
+              <ul style="margin:0 0 12px 18px;">
+                <li>App auf die neueste Version updaten.</li>
+                <li>App neu starten (komplett schließen) und erneut testen.</li>
+                <li>Internetverbindung prüfen.</li>
+                <li>Wenn etwas komisch ist: Screenshot + Support-Mail.</li>
+              </ul>
+              <div class="callout">
+                Für einen Bug-Report am besten mit:
+                <ul style="margin:8px 0 0 18px;">
+                  <li>Gerätemodell</li>
+                  <li>OS-Version</li>
+                  <li>Schritte zum Reproduzieren</li>
+                  <li>Erwartet vs. passiert</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <footer>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="../">Legal Center</a>
+          <a href="../privacy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+          <a href="../impressum/">Impressum</a>
+        </div>
+        <span>© <span id="year"></span> Nura AI</span>
+      </footer>
+    </main>
+
+<script>
+      (function(){
+        const prefersDe = (navigator.language || "").toLowerCase().startsWith("de");
+        const saved = localStorage.getItem("nura_lang");
+        const initial = saved || (prefersDe ? "de" : "en");
+
+        function setLang(lang){
+          document.documentElement.setAttribute("data-lang", lang);
+          localStorage.setItem("nura_lang", lang);
+
+          const enBtn = document.getElementById("lang-en");
+          const deBtn = document.getElementById("lang-de");
+          if(enBtn && deBtn){
+            enBtn.setAttribute("aria-pressed", lang === "en" ? "true" : "false");
+            deBtn.setAttribute("aria-pressed", lang === "de" ? "true" : "false");
+          }
+        }
+
+        window.NURA_setLang = setLang;
+        setLang(initial);
+
+        const enBtn = document.getElementById("lang-en");
+        const deBtn = document.getElementById("lang-de");
+        if(enBtn) enBtn.addEventListener("click", () => setLang("en"));
+        if(deBtn) deBtn.addEventListener("click", () => setLang("de"));
+
+        const year = document.getElementById("year");
+        if(year) year.textContent = new Date().getFullYear();
+      })();
+    </script>
+  </body>
+</html>

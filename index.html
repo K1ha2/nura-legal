@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <title>Nura AI — Legal</title>
+    <meta name="description" content="Nura AI legal pages: Privacy Policy, Terms of Use, Support, and Impressum." />
+
+    <style>
+      :root {
+        --bg:#ffffff;
+        --fg:#0b0b0b;
+        --muted:#4b4b4b;
+        --faint:#6a6a6a;
+        --border:#e9e9e9;
+        --card:#ffffff;
+        --chip:#f6f6f6;
+        --maxw:1080px;
+        --radius:18px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg:#0b0b0b;
+          --fg:#f4f4f4;
+          --muted:#c8c8c8;
+          --faint:#a3a3a3;
+          --border:#1f1f1f;
+          --card:#0f0f0f;
+          --chip:#121212;
+        }
+      }
+
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{
+        margin:0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+        line-height:1.65;
+        color:var(--fg);
+        background:var(--bg);
+      }
+
+      a{color:inherit; text-decoration: underline; text-underline-offset: 3px;}
+      a:hover{opacity:.86}
+
+      .wrap{max-width:var(--maxw); margin:0 auto; padding:26px 16px 72px;}
+
+      /* Top nav */
+      .nav{
+        display:flex; align-items:center; justify-content:space-between; gap:12px;
+        padding:12px 14px;
+        border:1px solid var(--border);
+        border-radius:999px;
+        background:var(--card);
+      }
+      .brand{display:flex; align-items:center; gap:10px; min-width:0;}
+      .mark{
+        width:34px; height:34px;
+        border-radius:12px;
+        border:1px solid var(--border);
+        background:var(--chip);
+        display:grid; place-items:center;
+        font-weight:800;
+        letter-spacing:.3px;
+      }
+      .brand-title{display:flex; flex-direction:column; min-width:0;}
+      .brand-title strong{font-size:14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+      .brand-title span{font-size:12px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+      .right{display:flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:flex-end;}
+      .pill{
+        display:inline-flex; align-items:center; gap:8px;
+        padding:8px 10px;
+        border:1px solid var(--border);
+        border-radius:999px;
+        background:var(--chip);
+        font-size:12px;
+        text-decoration:none;
+      }
+
+      /* Language toggle */
+      .lang-toggle{display:inline-flex; gap:6px; align-items:center;}
+      .lang-btn{
+        appearance:none;
+        border:1px solid var(--border);
+        background:var(--chip);
+        color:var(--fg);
+        font-size:12px;
+        padding:8px 10px;
+        border-radius:999px;
+        cursor:pointer;
+      }
+      .lang-btn[aria-pressed="true"]{
+        background:var(--fg);
+        color:var(--bg);
+        border-color:var(--fg);
+      }
+
+      /* Hero */
+      header.hero{padding:22px 2px 8px;}
+      h1{
+        margin:16px 0 10px;
+        font-size: clamp(32px, 4.3vw, 56px);
+        line-height: 1.06;
+        letter-spacing: -0.9px;
+      }
+      .sub{
+        margin:0;
+        max-width: 85ch;
+        color:var(--muted);
+        font-size: 15px;
+      }
+      .meta-row{
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+        align-items:center;
+        margin-top:14px;
+      }
+      .meta-row .mini{
+        color:var(--muted);
+        font-size:12px;
+      }
+      .meta-row .dot{color:var(--faint);}
+
+      /* Layout */
+      .grid{display:grid; grid-template-columns: 1fr; gap:14px; margin-top:18px;}
+      @media (min-width: 980px){
+        .grid{grid-template-columns: 1.15fr 0.85fr; align-items:start;}
+      }
+
+      .card{border:1px solid var(--border); border-radius:var(--radius); background:var(--card); overflow:hidden;}
+      .inner{padding:18px 18px;}
+      .kicker{margin:0 0 10px; font-size:12px; letter-spacing:.55px; text-transform:uppercase; color:var(--muted);}
+
+      /* Document list */
+      .docs{display:grid; gap:10px;}
+      .doc{
+        display:flex; align-items:center; justify-content:space-between; gap:14px;
+        padding:14px 14px;
+        border:1px solid var(--border);
+        border-radius:16px;
+        background:var(--chip);
+        text-decoration:none;
+      }
+      .doc:hover{opacity:.92}
+      .doc strong{display:block; font-size:15px; letter-spacing:-.2px;}
+      .doc span{display:block; margin-top:2px; font-size:13px; color:var(--muted);}
+      .arrow{color:var(--faint); font-size:18px; padding:0 6px;}
+
+      .callout{
+        margin-top:12px;
+        padding:12px 12px;
+        border:1px solid var(--border);
+        border-radius:16px;
+        background:var(--chip);
+        color:var(--muted);
+        font-size:13px;
+      }
+
+      /* Right column blocks */
+      .block{
+        padding:14px 14px;
+        border:1px solid var(--border);
+        border-radius:16px;
+        background:var(--chip);
+      }
+      .block + .block{margin-top:10px}
+      .block h3{margin:0 0 8px; font-size:14px; letter-spacing:-.2px;}
+      .block p{margin:0; font-size:13px; color:var(--muted);}
+      .block ul{margin:8px 0 0 18px; color:var(--muted); font-size:13px;}
+      .block li{margin:6px 0}
+
+      /* Bilingual blocks */
+      .lang-block{display:none}
+      html[data-lang="en"] .lang-en{display:block}
+      html[data-lang="de"] .lang-de{display:block}
+
+      footer{
+        margin-top:18px;
+        padding:18px 4px 0;
+        color:var(--muted);
+        font-size:13px;
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+        align-items:center;
+        justify-content:space-between;
+      }
+      .footer-links{display:flex; flex-wrap:wrap; gap:10px; align-items:center;}
+      .footer-links a{
+        padding:8px 10px;
+        border-radius:999px;
+        border:1px solid var(--border);
+        background:var(--chip);
+        text-decoration:none;
+      }
+      .footer-links a:hover{opacity:.9}
+
+      @media print {
+        body{background:#fff;color:#000}
+        .nav, footer{display:none !important}
+        .card{border:none}
+        a{color:#000}
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="wrap">
+      <div class="nav">
+        <div class="brand">
+          <div class="mark" aria-hidden="true">N</div>
+          <div class="brand-title">
+            <strong>Nura AI</strong>
+            <span class="lang-block lang-en">Legal Center</span>
+            <span class="lang-block lang-de">Rechtliches</span>
+          </div>
+        </div>
+
+        <div class="right">
+          <a class="pill" href="mailto:support@nura-ai.app">support@nura-ai.app</a>
+
+          <div class="lang-toggle" aria-label="Language">
+            <button class="lang-btn" id="lang-en" type="button" aria-pressed="false">EN</button>
+            <button class="lang-btn" id="lang-de" type="button" aria-pressed="false">DE</button>
+          </div>
+
+          <span class="pill">
+            <span class="lang-block lang-en">Last updated: <strong>2026-02-25</strong></span>
+            <span class="lang-block lang-de">Stand: <strong>2026-02-25</strong></span>
+          </span>
+        </div>
+      </div>
+
+      <header class="hero">
+        <div class="lang-block lang-en">
+          <h1>Legal Center</h1>
+          <p class="sub">
+            Privacy, Terms, Support and the German legal notice (Impressum). Transparent info about data processing and how AI features work.
+          </p>
+          <div class="meta-row">
+            <span class="mini">Nura AI</span><span class="dot">•</span>
+            <span class="mini">Black/White minimal</span><span class="dot">•</span>
+            <span class="mini">EN / DE</span>
+          </div>
+        </div>
+
+        <div class="lang-block lang-de">
+          <h1>Rechtliches</h1>
+          <p class="sub">
+            Datenschutz, Nutzungsbedingungen, Support und Impressum. Transparente Infos zur Datenverarbeitung und wie die KI-Funktionen arbeiten.
+          </p>
+          <div class="meta-row">
+            <span class="mini">Nura AI</span><span class="dot">•</span>
+            <span class="mini">Minimal (Schwarz/Weiß)</span><span class="dot">•</span>
+            <span class="mini">EN / DE</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="grid">
+        <section class="card" aria-label="Documents">
+          <div class="inner">
+            <p class="kicker">Documents</p>
+
+            <div class="docs">
+              <a class="doc" href="privacy/" aria-label="Open Privacy Policy">
+                <div>
+                  <strong class="lang-block lang-en">Privacy Policy</strong>
+                  <strong class="lang-block lang-de">Datenschutzerklärung</strong>
+                  <span class="lang-block lang-en">What data we process, where it goes, and your GDPR rights.</span>
+                  <span class="lang-block lang-de">Welche Daten wir verarbeiten, wohin sie gehen und deine DSGVO-Rechte.</span>
+                </div>
+                <div class="arrow" aria-hidden="true">→</div>
+              </a>
+
+              <a class="doc" href="terms/" aria-label="Open Terms of Use">
+                <div>
+                  <strong class="lang-block lang-en">Terms of Use</strong>
+                  <strong class="lang-block lang-de">Nutzungsbedingungen</strong>
+                  <span class="lang-block lang-en">Rules for using Nura AI, subscriptions, and disclaimers.</span>
+                  <span class="lang-block lang-de">Regeln zur Nutzung von Nura AI, Abos und wichtige Hinweise.</span>
+                </div>
+                <div class="arrow" aria-hidden="true">→</div>
+              </a>
+
+              <a class="doc" href="support/" aria-label="Open Support">
+                <div>
+                  <strong class="lang-block lang-en">Support</strong>
+                  <strong class="lang-block lang-de">Support</strong>
+                  <span class="lang-block lang-en">Contact, troubleshooting, and subscription help.</span>
+                  <span class="lang-block lang-de">Kontakt, Hilfe bei Problemen und Abos.</span>
+                </div>
+                <div class="arrow" aria-hidden="true">→</div>
+              </a>
+
+              <a class="doc" href="impressum/" aria-label="Open Impressum">
+                <div>
+                  <strong>Impressum</strong>
+                  <span class="lang-block lang-en">Provider identification required under German law.</span>
+                  <span class="lang-block lang-de">Anbieterkennzeichnung nach deutschem Recht.</span>
+                </div>
+                <div class="arrow" aria-hidden="true">→</div>
+              </a>
+            </div>
+
+            <div class="callout">
+              <div class="lang-block lang-en">
+                <strong>Apple Standard EULA (iOS)</strong><br />
+                For iOS users, Apple’s Standard EULA may also apply. You can read it here:
+                <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">Apple Standard EULA</a>.
+              </div>
+              <div class="lang-block lang-de">
+                <strong>Apple Standard-EULA (iOS)</strong><br />
+                Für iOS-Nutzer kann zusätzlich die Apple Standard-EULA gelten. Du findest sie hier:
+                <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">Apple Standard-EULA</a>.
+              </div>
+            </div>
+
+            <div class="callout">
+              <span class="lang-block lang-en"><strong>In the app:</strong> Settings → Legal</span>
+              <span class="lang-block lang-de"><strong>In der App:</strong> Einstellungen → Rechtliches</span>
+              <br />
+              <span class="lang-block lang-en">Contact: <a href="mailto:support@nura-ai.app">support@nura-ai.app</a></span>
+              <span class="lang-block lang-de">Kontakt: <a href="mailto:support@nura-ai.app">support@nura-ai.app</a></span>
+            </div>
+          </div>
+        </section>
+
+        <aside class="card" aria-label="AI & data overview">
+          <div class="inner">
+            <p class="kicker">AI & data</p>
+
+            <div class="block">
+              <h3 class="lang-block lang-en">Do you send data to servers?</h3>
+              <h3 class="lang-block lang-de">Werden Daten an Server gesendet?</h3>
+
+              <p class="lang-block lang-en">
+                Yes. For sync/account features, data is stored on our servers. For AI features, we send your prompt and the minimum relevant context to AI providers.
+              </p>
+              <p class="lang-block lang-de">
+                Ja. Für Sync/Account-Funktionen speichern wir Daten auf unseren Servern. Für KI senden wir deinen Prompt und minimal nötigen Kontext an KI-Anbieter.
+              </p>
+            </div>
+
+            <div class="block">
+              <h3 class="lang-block lang-en">Which AI models & where is processing?</h3>
+              <h3 class="lang-block lang-de">Welche KI-Modelle & wo wird verarbeitet?</h3>
+
+              <p class="lang-block lang-en">
+                We use AI models from <strong>OpenAI</strong> and <strong>Google</strong> (e.g., GPT-family and Gemini-family). Processing happens on external servers (not on-device).
+              </p>
+              <p class="lang-block lang-de">
+                Wir nutzen KI-Modelle von <strong>OpenAI</strong> und <strong>Google</strong> (z.B. GPT- und Gemini-Familie). Verarbeitung erfolgt auf externen Servern (nicht on-device).
+              </p>
+            </div>
+
+            <div class="block">
+              <h3 class="lang-block lang-en">Data minimization</h3>
+              <h3 class="lang-block lang-de">Datenminimierung</h3>
+
+              <p class="lang-block lang-en">
+                We only transmit what’s needed for the feature you used. Details and your rights are described in the Privacy Policy.
+              </p>
+              <p class="lang-block lang-de">
+                Wir übertragen nur das, was für die genutzte Funktion nötig ist. Details und deine Rechte stehen im Datenschutz.
+              </p>
+
+              <ul class="lang-block lang-en">
+                <li><a href="privacy/">Privacy Policy</a></li>
+                <li><a href="terms/">Terms of Use</a></li>
+              </ul>
+              <ul class="lang-block lang-de">
+                <li><a href="privacy/">Datenschutzerklärung</a></li>
+                <li><a href="terms/">Nutzungsbedingungen</a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <footer>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="privacy/">Privacy</a>
+          <a href="terms/">Terms</a>
+          <a href="support/">Support</a>
+          <a href="impressum/">Impressum</a>
+          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">
+            <span class="lang-block lang-en">Apple Standard EULA</span>
+            <span class="lang-block lang-de">Apple Standard-EULA</span>
+          </a>
+        </div>
+        <span>© <span id="year"></span> Nura AI</span>
+      </footer>
+    </main>
+
+    <script>
+      (function () {
+        const prefersDe = (navigator.language || "").toLowerCase().startsWith("de");
+        const saved = localStorage.getItem("nura_lang");
+        const initial = saved || (prefersDe ? "de" : "en");
+
+        function setLang(lang) {
+          document.documentElement.setAttribute("data-lang", lang);
+          localStorage.setItem("nura_lang", lang);
+
+          const enBtn = document.getElementById("lang-en");
+          const deBtn = document.getElementById("lang-de");
+          if (enBtn && deBtn) {
+            enBtn.setAttribute("aria-pressed", lang === "en" ? "true" : "false");
+            deBtn.setAttribute("aria-pressed", lang === "de" ? "true" : "false");
+          }
+        }
+
+        function safeBind(id, fn) {
+          const el = document.getElementById(id);
+          if (el) el.addEventListener("click", fn);
+        }
+
+        const year = document.getElementById("year");
+        if (year) year.textContent = new Date().getFullYear();
+
+        safeBind("lang-en", () => setLang("en"));
+        safeBind("lang-de", () => setLang("de"));
+
+        setLang(initial);
+      })();
+    </script>
+  </body>
+</html>
